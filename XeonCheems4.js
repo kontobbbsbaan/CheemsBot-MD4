@@ -1095,7 +1095,7 @@ const reactionMessage = {
 const latensie = speed() - timestampe
                 const menulist = `
 Hallo 👋 ${pushname}\n
-I'm MODZ BOTZ, This Bot Is Whatsapp Multi-Device Beta
+I'm 𝑀𝑂𝐷𝑍 𝐵𝑂𝑇𝑍, This Bot Is Whatsapp Multi-Device Beta
 If there is an error feature, immediately contact the owner so that it will be repaired immediately 🙏\n`
    
    //randoming function
@@ -8733,7 +8733,7 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
 case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-teks = `𝗝𝗮𝗻𝗴𝗮𝗻 𝗹𝘂𝗽𝗮 𝗱𝗼𝗻𝗮𝘀𝗶 𝗻𝘆𝗮 𝗕𝗿𝗼🙂`
+teks = `𝐃𝐎𝐍𝐀𝐒𝐈\n〽️𝘗𝘜𝘓𝘚𝘈:0838-4540-9710\n〽️𝘚𝘈𝘞𝘌𝘙𝘐𝘈:https://saweria.co/Kianganz\n〽️𝘔𝘠 𝘎𝘐𝘛𝘏𝘜𝘉:https://github.com/Kianganz1`
 let buttons = [
 {buttonId: `ping`, buttonText: {displayText: 'Ping'}, type: 1}
 ]
@@ -8746,7 +8746,7 @@ buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title:"©𝞙𝐼𝜦𝑁 𝑀𝞚𝐾𝛴𝛤 😈",
-body: "𝙘𝙡𝙞𝙘𝙠 𝙩𝙤 𝙙𝙤𝙣𝙖𝙩𝙚🍃", 
+body: "🌺ᴊᴀɴɢᴀɴ ʟᴜᴘᴀ ᴅᴏɴᴀsɪ ʙᴀɴʜ🍃", 
 thumbnail: fs.readFileSync("XeonMedia/theme/kian.jpg"),
 mediaType:1,
 mediaUrl: 'https://saweria.co/Kianganz',
@@ -8809,13 +8809,13 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
 	if (isBanChat) return reply(mess.banChat)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
-                    title: `Hi ${pushname}`,
-                    description: `𝙉𝙊𝙏𝙀:𝗝𝗮𝗻𝗴𝗮𝗻 𝘀𝗽𝗮𝗺 𝘆𝗮 🤬\n\n`,
-                    buttonText: "Click Disini 🥶",
-                    footerText: `〽️ 𝙎𝙄𝙇𝘼𝙃𝙆𝘼𝙉 𝘿𝙄 𝙋𝙀𝙉𝘾𝙀𝙏 𝘿𝘼𝙉 𝙋𝙄𝙇𝙄𝙃 𝙔𝘼🐦`,
+                    title: `Hallo ${pushname}`,
+                    description: `🧿Gunakan bot dengan bijak banh🌹\n\n`,
+                    buttonText: "Click Disini",
+                    footerText: `©𝑀𝑂𝐷𝑍 𝐵𝑂𝑇𝑍`,
                     listType: "SINGLE_SELECT",
                     sections: [{
-								"title": "𝞙𝐼𝜦𝑁 𝑀𝞚𝐾𝛴𝛤",
+								"title": "🇲🇨𝞙𝐼𝜦𝑁 𝑀𝞚𝐾𝛴𝛤😈",
 								"rows": [
 									{
 										"title": "Other",
