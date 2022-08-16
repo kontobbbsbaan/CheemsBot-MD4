@@ -8795,7 +8795,7 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
             { quickReplyButton: { displayText: `List Menu `, id: 'command'} },
             { quickReplyButton: { displayText: `Owner `, id: 'owner'} }
         	]
-        	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), mimetype: `${docs}`, fileName: ``, templateButtons: buttonmenu, footer: ``, mentionedJid: [m.sender] })
+        	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), mimetype: `${docs}`, fileName: ` `, templateButtons: buttonmenu, footer: ``, mentionedJid: [m.sender] })
                         }
                      }
             break
@@ -8804,23 +8804,23 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
 	if (isBanChat) return reply(mess.banChat)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
-                    title: `Hallo ${pushname}`,
-                    description: `「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」       
-𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
-𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
-𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownername}
-𝗢𝘄𝗻𝗲𝗿 𝗡𝗼. : ${global.owner}
-𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
-𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
-𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${jumlahcmd}
-𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}\n\n`,
+                    title: `Hallo ${pushname}\n`,
+                    description: `「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」\n
+𝐒𝐩𝐞𝐞𝐝 : ${latensie.toFixed(4)} miliseconds
+𝐑𝐮𝐧𝐭𝐢𝐦𝐞 : ${runtime(process.uptime())}
+𝐍𝐚𝐦𝐞 𝐁𝐨𝐭 : ${global.botname}
+𝐍𝐚𝐦𝐞 𝐎𝐰𝐧𝐞𝐫 : ${global.ownername}
+𝐍𝐨 𝐎𝐰𝐧𝐞𝐫 : ${global.owner}
+𝐍𝐚𝐦𝐞 𝐇𝐨𝐬𝐭 : ${os.hostname()}
+𝐏𝐥𝐚𝐭𝐟𝐫𝐨𝐦 : ${os.platform()}
+𝐔𝐬𝐞𝐫 𝐓𝐨𝐭𝐚𝐥 : ${Object.keys(global.db.data.users).length}
+𝐓𝐨𝐭𝐚𝐥 𝐇𝐢𝐭 : ${jumlahcmd}
+𝐓𝐨𝐭𝐚𝐥 𝐇𝐢𝐭 𝐓𝐨𝐝𝐚𝐲 : ${jumlahharian}\n𝐆𝐜 𝐁𝐨𝐭 : https://chat.whatsapp.com/LKmbdt3kuu23VmzRZYyUVF\n\n`,
                     buttonText: "Click Disini",
                     footerText: ``,
                     listType: "SINGLE_SELECT",
                     sections: [{
-								"title": "🇲🇨𝞙𝐼𝜦𝑁 𝑀𝞚𝐾𝛴𝛤😈",
+								"title": " ",
 								"rows": [
 									{
 										"title": "Other",
