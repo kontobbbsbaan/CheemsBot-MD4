@@ -8688,8 +8688,8 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 setbot.templateImage = false
                 setbot.templateVideo = false
                 setbot.templateGif = false
-                setbot.templateMsg = false
-                setbot.templateDocument = true
+                setbot.templateMsg = true
+                setbot.templateDocument = false
                 reply(mess.success)
                 } else {
                 let sections = [
@@ -8746,7 +8746,7 @@ buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title:"©𝞙𝐼𝜦𝑁 𝑀𝞚𝐾𝛴𝛤 😈",
-body: "🌺ᴊᴀɴɢᴀɴ ʟᴜᴘᴀ ᴅᴏɴᴀsɪ ʙᴀɴʜ🍃", 
+body: "Please Donate", 
 thumbnail: fs.readFileSync("XeonMedia/theme/kian.jpg"),
 mediaType:1,
 mediaUrl: 'https://saweria.co/Kianganz',
@@ -8764,11 +8764,6 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                                 urlButton: {
                                     displayText: 'YouTube ',
                                     url: `${websitex}`
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'All Menu ',
-                                    id: 'allmenu'
                                 }
                             }, {
                                 quickReplyButton: {
