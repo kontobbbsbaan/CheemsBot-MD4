@@ -2426,17 +2426,17 @@ if (isBanChat) return reply(mess.banChat)
 *Reason:* ${vote[m.chat][0]}
 
 ┌〔 UPVOTE 〕
-│ 
+ 
 ┃╠ Total: ${vote[m.chat][1].length}
-│
-│ 
+
+ 
 └────
 
 ┌〔 DEVOTE 〕
-│ 
+ 
 ┃╠ Total: ${vote[m.chat][2].length}
-│
-│ 
+
+ 
 └────
 
 *${prefix}delvote* - To Delete Vote Session`
@@ -2469,17 +2469,17 @@ if (isBanChat) return reply(mess.banChat)
 *Reason:* ${vote[m.chat][0]}
 
 ┌〔 UPVOTE 〕
-│ 
+ 
 ┃╠ Total: ${vote[m.chat][1].length}
 ${vote[m.chat][1].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
+ 
 └────
 
 ┌〔 DEVOTE 〕
-│ 
+ 
 ┃╠ Total: ${vote[m.chat][2].length}
 ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
+ 
 └────
 
 *${prefix}delvote* - To Delete Vote Session`
@@ -2513,17 +2513,17 @@ if (isBanChat) return reply(mess.banChat)
 *Reason:* ${vote[m.chat][0]}
 
 ┌〔 UPVOTE 〕
-│ 
+ 
 ┃╠ Total: ${vote[m.chat][1].length}
 ${vote[m.chat][1].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
+ 
 └────
 
 ┌〔 DEVOTE 〕
-│ 
+ 
 ┃╠ Total: ${vote[m.chat][2].length}
 ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
+ 
 └────
 
 *${prefix}delvote* - To Delete Vote Session`
@@ -2553,17 +2553,17 @@ teks_vote = `*「 VOTE 」*
 *Reason:* ${vote[m.chat][0]}
 
 ┌〔 UPVOTE 〕
-│ 
+ 
 ┃╠ Total: ${upvote.length}
 ${vote[m.chat][1].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
+ 
 └────
 
 ┌〔 DEVOTE 〕
-│ 
+ 
 ┃╠ Total: ${devote.length}
 ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
-│ 
+ 
 └────
 
 *${prefix}delvote* - To Delete Vote Session
@@ -8795,7 +8795,7 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
             { quickReplyButton: { displayText: `List Menu `, id: 'command'} },
             { quickReplyButton: { displayText: `Owner `, id: 'owner'} }
         	]
-        	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), mimetype: `${docs}`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
+        	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), mimetype: `${docs}`, fileName: ``, templateButtons: buttonmenu, footer: ``, mentionedJid: [m.sender] })
                         }
                      }
             break
@@ -8805,9 +8805,19 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Hallo ${pushname}`,
-                    description: `🧿Gunakan bot dengan bijak banh🌹\n\n`,
+                    description: `「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」       
+𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
+𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
+𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
+𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownername}
+𝗢𝘄𝗻𝗲𝗿 𝗡𝗼. : ${global.owner}
+𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
+𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
+𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
+𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${jumlahcmd}
+𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}\n\n`,
                     buttonText: "Click Disini",
-                    footerText: `©𝑀𝑂𝐷𝑍 𝐵𝑂𝑇𝑍`,
+                    footerText: ``,
                     listType: "SINGLE_SELECT",
                     sections: [{
 								"title": "🇲🇨𝞙𝐼𝜦𝑁 𝑀𝞚𝐾𝛴𝛤😈",
