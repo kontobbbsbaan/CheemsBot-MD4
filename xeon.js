@@ -172,14 +172,14 @@ XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeUR
                 const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 	            const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 	            const xmembers = metadata.participants.length
-                let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: XeonWlcm, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+                let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 2022,status: 200, thumbnail: XeonWlcm, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                 xeonbody = `
 👋 Halo beban @${xeonName.split("@")[0]}\n`
       //if you copy the code value,
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
 let buttons = [
-{buttonId: `wkwwk`, buttonText: {displayText: '\nAku Suka Beban'}, type: 1}
+{buttonId: `wkwwk`, buttonText: {displayText: 'Welcome 🐦\nJoin Banh\nhttps://chat.whatsapp.com/F5LjAIBH2Qh5CBbZJklSVD'}, type: 1}
 ]
 let buttonMessage = {
 document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
@@ -187,7 +187,7 @@ mimetype: docs,
 jpegThumbnail:XeonWlcm,
 mentions: [num],
 fileName: `${metadata.subject}`,
-fileLength: 9999999999,
+fileLength: 9999999999999,
 caption: xeonbody,
 footer: ``,
 buttons: buttons,
@@ -197,7 +197,7 @@ title: `${ownername}`,
 body: `Wih Ada Beban`,
 mediaType:2,
 thumbnail: XeonWlcm,
-sourceUrl: `${websitex}`,
+sourceUrl: `https://chat.whatsapp.com/F5LjAIBH2Qh5CBbZJklSVD`,
 mediaUrl: `${websitex}`
 }}
 }
@@ -208,14 +208,14 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
 	                const xeondate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                 	let xeonName = num
                     const xeonmembers = metadata.participants.length
-                    let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: xeonbuffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+                    let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 2022,status: 200, thumbnail: xeonbuffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                     xeonbody = `
 👋 Bay beban @${xeonName.split("@")[0]}\n`
       //if you copy the code value,
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
 let buttons = [
-{buttonId: `wkwkwk`, buttonText: {displayText: '\nAku Beban Dan aku Bangga'}, type: 1}
+{buttonId: `wkwkwk`, buttonText: {displayText: 'Bay 🤓\nJoin banh\nhttps://chat.whatsapp.com/F5LjAIBH2Qh5CBbZJklSVD'}, type: 1}
 ]
 let buttonMessage = {
 document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
@@ -223,7 +223,7 @@ mimetype: docs,
 jpegThumbnail:XeonLft,
 mentions: [num],
 fileName: `${metadata.subject}`,
-fileLength: 9999999999,
+fileLength: 9999999999999,
 caption: xeonbody,
 footer: ``,
 buttons: buttons,
@@ -233,7 +233,7 @@ title: `${ownername}`,
 body: `Si Beban Keluar.`,
 mediaType:2,
 thumbnail: XeonLft,
-sourceUrl: `${websitex}`,
+sourceUrl: `https://chat.whatsapp.com/F5LjAIBH2Qh5CBbZJklSVD`,
 mediaUrl: `${websitex}`
 }}
 }
