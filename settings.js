@@ -105,20 +105,20 @@ global.antitags = false
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
-    success: '𝘿𝙊𝙉𝙀 ✓',
-    admin: '𝙏𝙃𝙄𝙎 𝙁𝙀𝘼𝙏𝙐𝙍𝙀 𝙄𝙎 𝙊𝙉𝙇𝙔 𝙁𝙊𝙍 𝘼𝘿𝙈𝙄𝙉!',
-    botAdmin: '𝘽𝙊𝙏 𝙈𝙐𝙎𝙏 𝘽𝙀 𝘼𝘿𝙈𝙄𝙉 𝙁𝙄𝙍𝙎𝙏!',
-    owner: '𝙏𝙃𝙄𝙎 𝙁𝙀𝘼𝙏𝙐𝙍𝙀 𝙄𝙎 𝙊𝙉𝙇𝙔 𝙁𝙊𝙍 𝙊𝙒𝙉𝙀𝙍!',
-    group: '𝙁𝙀𝘼𝙏𝙐𝙍𝙀 𝙐𝙎𝙀𝘿 𝙊𝙉𝙇𝙔 𝙁𝙊𝙍 𝙂𝙍𝙊𝙐𝙋𝙎!',
-    private: '𝙁𝙀𝘼𝙏𝙐𝙍𝙀𝙎 𝙐𝙎𝙀𝘿 𝙊𝙉𝙇𝙔 𝙁𝙊𝙍 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘾𝙃𝘼𝙏!',
-    bot: '𝙏𝙃𝙄𝙎 𝙁𝙀𝘼𝙏𝙐𝙍𝙀 𝙄𝙎 𝙊𝙉𝙇𝙔 𝙁𝙊𝙍 𝘽𝙊𝙏',
-    wait: '𝙋𝙍𝙊𝙎𝙀𝙎...',
-    linkm: '𝙇𝙄𝙉𝙆 𝙉𝙔𝘼 𝙈𝘼𝙉𝘼?',
-    error: '𝙀𝙍𝙊𝙍!!',
-    endLimit: '𝙔𝙊𝙐𝙍 𝘿𝘼𝙄𝙇𝙔 𝙇𝙄𝙈𝙄𝙏 𝙃𝘼𝙎 𝙀𝙓𝙋𝙄𝙍𝙀𝘿, 𝙏𝙃𝙀 𝙇𝙄𝙈𝙄𝙏 𝙒𝙄𝙇𝙇 𝘽𝙀 𝙍𝙀𝙎𝙀𝙏 𝙀𝙑𝙀𝙍𝙔 12 𝙃𝙊𝙐𝙍𝙎',
-    ban: 'You have been banned by the owner, if you want to be unbanned, chat owner.',
-    nsfw: '𝙩𝙝𝙚 𝙣𝙨𝙛𝙬 𝙛𝙚𝙖𝙩𝙪𝙧𝙚 𝙝𝙖𝙨 𝙣𝙤𝙩 𝙗𝙚𝙚𝙣 𝙖𝙘𝙩𝙞𝙫𝙖𝙩𝙚𝙙, 𝙥𝙡𝙚𝙖𝙨𝙚 𝙘𝙤𝙣𝙩𝙖𝙘𝙩 𝙩𝙝𝙚 𝙖𝙙𝙢𝙞𝙣 𝙩𝙤 𝙖𝙘𝙩𝙞𝙫𝙖𝙩𝙚',
-    banChat: 'The bot was banned in this group, please contact the owner to unban'
+    success: 'Berhasil',
+    admin: 'Fitur Hanya Khusus Buat Admin Grub!',
+    botAdmin: 'Jadikan Bot Sebagai Admin!',
+    owner: 'Fitur Hanya Khusus Buat Owner!',
+    group: 'Fitur Hanya Dapat Di Gunakan Di Grub!',
+    private: 'Fitur Hanya Khusu Privat Chat!',
+    bot: 'Khusus Bot',
+    wait: 'Tunggu Banh...',
+    linkm: 'Link?',
+    error: 'Eror!!',
+    endLimit: 'Limit Kamu Habis',
+    ban: 'Kamu Telah Di Banned Oleh Bot',
+    nsfw: 'Nsfw Tidak Di Aktifkan Oleh Owner',
+    banChat: 'Bot Telah Di Banned Di Grub ini'
 }
     global.limitawal = {
     premium: "Infinity",
