@@ -63,7 +63,7 @@ global.location = "Indonesian" //ur location
 //bot bomdy 
 global.owner = ['6283845409710']
 global.ownertag = '6283845409710' //ur tag number
-global.botname = '༺𝙈 𝙊 𝘿 𝙕 𝘽 𝙊 𝙏 𝙕༻' //ur bot name
+global.botname = '𝑀𝑂𝐷𝑍 𝐵𝑂𝑇𝑍' //ur bot name
 global.linkz = "https://saweria.co/Kianganz" //your theme url which will be displayed on whatsapp
 global.websitex = "https://github.com/Kianganz1" //ur website to be displayed
 global.botscript = 'https://github.com/DGXeon/CheemsBot-MD4' //script link
@@ -133,7 +133,7 @@ global.mess = {
    umpanawal: 5,
    potionawal: 1
 }
-global.thumb = fs.readFileSync('./XeonMedia/theme/cheemspic.jpg')
+global.thumb = fs.readFileSync('./XeonMedia/theme/kian.jpg')
 global.flaming = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
 global.fluming = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=fluffy-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
 global.flarun = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=runner-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
