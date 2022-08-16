@@ -178,6 +178,9 @@ XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeUR
       //if you copy the code value,
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
+let buttons = [
+{buttonId: `wkwwk`, buttonText: {displayText: '\nAku Suka Beban'}, type: 1}
+]
 let buttonMessage = {
 document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
 mimetype: docs,
@@ -186,6 +189,7 @@ mentions: [num],
 fileName: `${metadata.subject}`,
 fileLength: 9999999999,
 caption: xeonbody,
+footer: ``,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
@@ -210,6 +214,9 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
       //if you copy the code value,
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
+let buttons = [
+{buttonId: `wkwkwk`, buttonText: {displayText: '\nAku Beban Dan aku Bangga'}, type: 1}
+]
 let buttonMessage = {
 document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
 mimetype: docs,
@@ -218,6 +225,7 @@ mentions: [num],
 fileName: `${metadata.subject}`,
 fileLength: 9999999999,
 caption: xeonbody,
+footer: ``,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
