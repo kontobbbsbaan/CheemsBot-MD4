@@ -179,7 +179,7 @@ XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeUR
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
 let buttons = [
-{buttonId: `wkwwk`, buttonText: {displayText: 'Welcome 🐦\nJoin Banh\nhttps://chat.whatsapp.com/F5LjAIBH2Qh5CBbZJklSVD'}, type: 1}
+{buttonId: `wkwwk`, buttonText: {displayText: 'Welcome 🐦\nJoin Banh\nhttps://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg'}, type: 1}
 ]
 let buttonMessage = {
 document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
@@ -187,7 +187,7 @@ mimetype: docs,
 jpegThumbnail:XeonWlcm,
 mentions: [num],
 fileName: `${metadata.subject}`,
-fileLength: 9999999999999,
+fileLength: 999999999999,
 caption: xeonbody,
 footer: ``,
 buttons: buttons,
@@ -197,7 +197,7 @@ title: `${ownername}`,
 body: `Wih Ada Beban`,
 mediaType:2,
 thumbnail: XeonWlcm,
-sourceUrl: `https://chat.whatsapp.com/F5LjAIBH2Qh5CBbZJklSVD`,
+sourceUrl: `https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg`,
 mediaUrl: `${websitex}`
 }}
 }
@@ -215,7 +215,7 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
 let buttons = [
-{buttonId: `wkwkwk`, buttonText: {displayText: 'Bay 🤓\nJoin banh\nhttps://chat.whatsapp.com/F5LjAIBH2Qh5CBbZJklSVD'}, type: 1}
+{buttonId: `wkwkwk`, buttonText: {displayText: 'Bay 🤓\nJoin banh\nhttps://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg'}, type: 1}
 ]
 let buttonMessage = {
 document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
@@ -223,7 +223,7 @@ mimetype: docs,
 jpegThumbnail:XeonLft,
 mentions: [num],
 fileName: `${metadata.subject}`,
-fileLength: 9999999999999,
+fileLength: 999999999999,
 caption: xeonbody,
 footer: ``,
 buttons: buttons,
@@ -233,7 +233,7 @@ title: `${ownername}`,
 body: `Si Beban Keluar.`,
 mediaType:2,
 thumbnail: XeonLft,
-sourceUrl: `https://chat.whatsapp.com/F5LjAIBH2Qh5CBbZJklSVD`,
+sourceUrl: `https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg`,
 mediaUrl: `${websitex}`
 }}
 }
