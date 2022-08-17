@@ -8815,7 +8815,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 𝐏𝐥𝐚𝐭𝐟𝐫𝐨𝐦 : ${os.platform()}
 𝐔𝐬𝐞𝐫 𝐓𝐨𝐭𝐚𝐥 : ${Object.keys(global.db.data.users).length}
 𝐓𝐨𝐭𝐚𝐥 𝐇𝐢𝐭 : ${jumlahcmd}
-𝐓𝐨𝐭𝐚𝐥 𝐇𝐢𝐭 𝐓𝐨𝐝𝐚𝐲 : ${jumlahharian}\n𝐆𝐜 𝐁𝐨𝐭 : https://chat.whatsapp.com/LKmbdt3kuu23VmzRZYyUVF\n\n`,
+𝐓𝐨𝐭𝐚𝐥 𝐇𝐢𝐭 𝐓𝐨𝐝𝐚𝐲 : ${jumlahharian}\n𝐆𝐜 𝐁𝐨𝐭 : https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg\n𝐌𝐲 𝐆𝐢𝐭𝐡𝐮𝐛 : https://github.com/Kianganz1\n𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞 : https://youtube.com/channel/UCkBZi04ShJK4PU4SDkp_flA\n\n`,
                     buttonText: "Click Disini",
                     footerText: ``,
                     listType: "SINGLE_SELECT",
