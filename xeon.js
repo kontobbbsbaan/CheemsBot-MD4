@@ -187,7 +187,7 @@ mimetype: docs,
 jpegThumbnail:XeonWlcm,
 mentions: [num],
 fileName: `${metadata.subject}`,
-fileLength: 999999999999,
+fileLength: 999999999999999,
 caption: xeonbody,
 footer: ``,
 buttons: buttons,
@@ -215,7 +215,7 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
 let buttons = [
-{buttonId: `wkwkwk`, buttonText: {displayText: 'Bay 🤓\nJoin banh\nhttps://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg'}, type: 1}
+{buttonId: `wkwkwk`, buttonText: {displayText: 'Bye 🤓\nJoin banh\nhttps://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg'}, type: 1}
 ]
 let buttonMessage = {
 document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
@@ -223,7 +223,7 @@ mimetype: docs,
 jpegThumbnail:XeonLft,
 mentions: [num],
 fileName: `${metadata.subject}`,
-fileLength: 999999999999,
+fileLength: 999999999999999,
 caption: xeonbody,
 footer: ``,
 buttons: buttons,
