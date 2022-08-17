@@ -105,7 +105,7 @@ global.antitags = true
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
-    success: 'Berhasil',
+    success: 'Nih Kak >_<',
     admin: 'Fitur Hanya Khusus Buat Admin Grub!',
     botAdmin: 'Jadikan Bot Sebagai Admin!',
     owner: 'Fitur Hanya Khusus Buat Owner!',
