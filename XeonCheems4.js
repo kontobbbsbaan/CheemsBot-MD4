@@ -8804,9 +8804,9 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Hallo ${pushname} 👋\n`,
-                    description: ``,
-                    buttonText: "CLICK DISINI",
-                    footerText: ``,
+                    description: ` `,
+                    buttonText: "CLICK HERE",
+                    footerText: ` `,
                     listType: "SINGLE_SELECT",
                     sections: [{
 								"title": " Please select ",
