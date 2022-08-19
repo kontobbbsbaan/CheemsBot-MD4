@@ -176,13 +176,13 @@ XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeUR
                 xeonbody = `
 Hallo @${xeonName.split("@")[0]}
 Welcome To ${metadata.subject}
-Member Ke${xmembers}
-Joined${xtime} ${xdate}`
+Member Ke ${xmembers}
+Waktu ${xtime}\nTanggal ${xdate}`
       //if you copy the code value,
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
 let buttons = [
-{buttonId: `wkwwk`, buttonText: {displayText: 'Welcome Friend 🤓'}, type: 1}
+{buttonId: `wkwwk`, buttonText: {displayText: 'Welcome'}, type: 1}
 ]
 let buttonMessage = {
 document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
@@ -190,15 +190,15 @@ mimetype: docs,
 jpegThumbnail:XeonWlcm,
 mentions: [num],
 fileName: `${metadata.subject}`,
-fileLength: 99999999999999,
+fileLength: 99999999999999999999,
 caption: xeonbody,
 footer: `${botname}`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: `${ownername}`,
-body: `Don't forget to read group description`,
-mediaType:3,
+body: ` `,
+mediaType:1,
 thumbnail: XeonWlcm,
 sourceUrl: `${websitex}`,
 mediaUrl: `${websitex}`
@@ -216,12 +216,12 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
 Goodbye @${xeonName.split("@")[0]}
 keluar Dari ${metadata.subject}
 Member Ke ${xeonmembers}
-Waktu ${xeontime} ${xeondate}\n`
+Waktu ${xeontime}\nTanggal ${xeondate}\n`
       //if you copy the code value,
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
 let buttons = [
-{buttonId: `wkwkwk`, buttonText: {displayText: 'Bye Friend🍃'}, type: 1}
+{buttonId: `wkwkwk`, buttonText: {displayText: 'Bye'}, type: 1}
 ]
 let buttonMessage = {
 document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
@@ -237,7 +237,7 @@ headerType: 4,
 contextInfo:{externalAdReply:{
 title: `${ownername}`,
 body: ` `,
-mediaType:3,
+mediaType:1,
 thumbnail: XeonLft,
 sourceUrl: `https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg`,
 mediaUrl: `https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg`
