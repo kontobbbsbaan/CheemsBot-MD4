@@ -172,14 +172,14 @@ XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeUR
                 const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 	            const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 	            const xmembers = metadata.participants.length
-                let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 99999999999999999999,status: 200, thumbnail: XeonWlcm, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+                let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 99999999999999999999,status: 200, thumbnail: XeonWlcm, surface: 200, message: ` `, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                 xeonbody = `
 Hallo @${xeonName.split("@")[0]}\nWelcome To ${metadata.subject}\nMember Ke ${xmembers}\nWaktu ${xtime}\nTanggal ${xdate}`
       //if you copy the code value,
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
 let buttons = [
-{buttonId: `wkwwk`, buttonText: {displayText: 'Welcome'}, type: 1}
+{buttonId: `Sound11`, buttonText: {displayText: 'Welcome'}, type: 1}
 ]
 let buttonMessage = {
 document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
@@ -195,7 +195,7 @@ headerType: 4,
 contextInfo:{externalAdReply:{
 title: `${metadata.subject}`,
 body: ` `,
-mediaType:1,
+mediaType: 1,
 thumbnail: XeonWlcm,
 sourceUrl: `https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg`,
 mediaUrl: `https://telegra.ph/file/111a61774f982431ea6d7.jpg`
@@ -208,7 +208,7 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
 	                const xeondate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                 	let xeonName = num
                     const xeonmembers = metadata.participants.length
-                    let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 99999999999999999999,status: 200, thumbnail: xeonbuffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+                    let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 99999999999999999999,status: 200, thumbnail: xeonbuffer, surface: 200, message: ` `, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                     xeonbody = `
 Goodbye @${xeonName.split("@")[0]}\nkeluar Dari ${metadata.subject}\nMember Ke ${xeonmembers}\nWaktu ${xeontime}\nTanggal ${xeondate}\n`
       //if you copy the code value,
@@ -231,7 +231,7 @@ headerType: 4,
 contextInfo:{externalAdReply:{
 title: `${metadata.subject}`,
 body: ` `,
-mediaType:2,
+mediaType: 1,
 thumbnail: XeonLft,
 sourceUrl: `https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg`,
 mediaUrl: `https://telegra.ph/file/111a61774f982431ea6d7.jpg`
