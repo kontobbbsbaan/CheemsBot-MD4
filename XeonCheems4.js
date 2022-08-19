@@ -1095,7 +1095,8 @@ const reactionMessage = {
 const latensie = speed() - timestampe
                 const menulist = `
 Hallo 👋 ${pushname}\n
-Saya Adalah Bot whatsapp multi device Yang bisa membuat sticker dan lain lain bot jika tidak merespon Offline/Lag karena terjadinya banyak spam, maaf Kalo bot ini menggunakan setengah bahasa Inggris jika ada fitur Yang error silakan ketik  .bug /chat owner akan segera di perbaiki\n`
+I'm 𝑀𝑂𝐷𝑍 𝐵𝑂𝑇𝑍, This Bot Is Whatsapp Multi-Device Beta
+If there is an error feature, immediately contact the owner so that it will be repaired immediately 🙏\n`
    
    //randoming function
 function pickRandom(list) {
@@ -3174,10 +3175,10 @@ if (isBanChat) return reply(mess.banChat)
                     const sendm =  XeonBotInc.sendMessage(
       from, 
       {
-       text: " ",
-       footer:  ,
-       title: "Mau Setting group ya......",
-       buttonText: "Tap untuk setting",
+       text: "Group Settings",
+       footer: botname,
+       title: "Set your group settings here......",
+       buttonText: "Click Button",
        sections
       }, { quoted : m }
     )  
@@ -8816,7 +8817,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 𝐓𝐨𝐭𝐚𝐥 𝐇𝐢𝐭 : ${jumlahcmd}
 𝐓𝐨𝐭𝐚𝐥 𝐇𝐢𝐭 𝐓𝐨𝐝𝐚𝐲 : ${jumlahharian}\n𝐆𝐜 𝐁𝐨𝐭 : https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg\n𝐌𝐲 𝐆𝐢𝐭𝐡𝐮𝐛 : https://github.com/Kianganz1\n𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞 : https://youtube.com/channel/UCkBZi04ShJK4PU4SDkp_flA\n\n`,
                     buttonText: "Click Disini",
-                    footerText: `Jangan Lupa Join grub Bot`,
+                    footerText: ``,
                     listType: "SINGLE_SELECT",
                     sections: [{
 								"title": " ",
