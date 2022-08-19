@@ -1094,9 +1094,8 @@ const reactionMessage = {
                 const timestampe = speed();
 const latensie = speed() - timestampe
                 const menulist = `
-Hallo 👋 ${pushname}\n
-I'm 𝑀𝑂𝐷𝑍 𝐵𝑂𝑇𝑍, This Bot Is Whatsapp Multi-Device Beta
-If there is an error feature, immediately contact the owner so that it will be repaired immediately 🙏\n`
+Hallo ${pushname} 👋\n
+「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」\nSpeed : ${latensie.toFixed(4)} miliseconds\nRuntime : ${runtime(process.uptime())}\nName Bot : ${global.botname}\nName\nOwner : ${global.ownername}\nNomer Owner : ${global.owner}\nHostname : ${os.hostname()}\nPlatform : ${os.platform()}\nUser Total : ${Object.keys(global.db.data.users).length}\nTotal Hit : ${jumlahcmd}\nTotal Hit Today : ${jumlahharian}\nGroub Bot : https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg\nMy Github : https://github.com/Kianganz1\nSubscribe : https://youtube.com/channel/UCkBZi04ShJK4PU4SDkp_flA\n`
    
    //randoming function
 function pickRandom(list) {
@@ -8804,23 +8803,13 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
 	if (isBanChat) return reply(mess.banChat)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
-                    title: `Hallo ${pushname}\n`,
-                    description: `「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」\n
-𝐒𝐩𝐞𝐞𝐝 : ${latensie.toFixed(4)} miliseconds
-𝐑𝐮𝐧𝐭𝐢𝐦𝐞 : ${runtime(process.uptime())}
-𝐍𝐚𝐦𝐞 𝐁𝐨𝐭 : ${global.botname}
-𝐍𝐚𝐦𝐞 𝐎𝐰𝐧𝐞𝐫 : ${global.ownername}
-𝐍𝐨 𝐎𝐰𝐧𝐞𝐫 : ${global.owner}
-𝐍𝐚𝐦𝐞 𝐇𝐨𝐬𝐭 : ${os.hostname()}
-𝐏𝐥𝐚𝐭𝐟𝐫𝐨𝐦 : ${os.platform()}
-𝐔𝐬𝐞𝐫 𝐓𝐨𝐭𝐚𝐥 : ${Object.keys(global.db.data.users).length}
-𝐓𝐨𝐭𝐚𝐥 𝐇𝐢𝐭 : ${jumlahcmd}
-𝐓𝐨𝐭𝐚𝐥 𝐇𝐢𝐭 𝐓𝐨𝐝𝐚𝐲 : ${jumlahharian}\n𝐆𝐜 𝐁𝐨𝐭 : https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg\n𝐌𝐲 𝐆𝐢𝐭𝐡𝐮𝐛 : https://github.com/Kianganz1\n𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞 : https://youtube.com/channel/UCkBZi04ShJK4PU4SDkp_flA\n\n`,
-                    buttonText: "Click Disini",
+                    title: `Hallo ${pushname} 👋\n`,
+                    description: ``,
+                    buttonText: "CLICK DISINI",
                     footerText: ``,
                     listType: "SINGLE_SELECT",
                     sections: [{
-								"title": " ",
+								"title": " Please select ",
 								"rows": [
 									{
 										"title": "Other",
