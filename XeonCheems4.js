@@ -522,8 +522,8 @@ jumlahharian = `${dataa.value}`
 	
 	//antispam or auto react
 //if (m.message && msgFilter.isFiltered(from)) {
-//console.log(`${global.themeemoji}[SPAM]`, color(moment(m.messageTimestamp * 1000).format('DD/MM/YYYY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'from', color(m.pushName))
-//return XeonBotInc.sendMessage(from, { react: { text: `${global.themeemoji}`, key: m.key }})
+//console.log(`➢[SPAM]`, color(moment(m.messageTimestamp * 1000).format('DD/MM/YYYY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'from', color(m.pushName))
+//return XeonBotInc.sendMessage(from, { react: { text: `➢`, key: m.key }})
 //}
 	
 //auto read whatsapp status
@@ -3359,8 +3359,8 @@ for (let i of msg.userReceipt) {
 let read = i.readTimestamp
 let unread = i.receiptTimestamp
 let waktu = read ? read : unread
-teks += `${global.themeemoji} @${i.userJid.split('@')[0]}\n`
-teks += ` ┗━${global.themeemoji} *Time :* ${moment(waktu * 1000).format('DD/MM/YY HH:mm:ss')} ${global.themeemoji} *Status :* ${read ? 'Read' : 'Sent'}\n\n`
+teks += `➢ @${i.userJid.split('@')[0]}\n`
+teks += ` ┗━➢ *Time :* ${moment(waktu * 1000).format('DD/MM/YY HH:mm:ss')} ➢ *Status :* ${read ? 'Read' : 'Sent'}\n\n`
 }
 XeonBotInc.sendTextWithMentions(m.chat, teks, m)
 }
@@ -6112,7 +6112,7 @@ let search = await yts(args.join(" "))
 let teks = '*| YOUTUBE SEARCH |*\n\n Result From '+text+'\n\n'
 let no = 1
 for (let i of search.all) {
-teks += `${global.themeemoji} No : ${no++}\n${global.themeemoji} Type : ${i.type}\n${global.themeemoji} Video ID : ${i.videoId}\n${global.themeemoji} Title : ${i.title}\n${global.themeemoji} Views : ${i.views}\n${global.themeemoji} Duration : ${i.timestamp}\n${global.themeemoji} Uploaded : ${i.ago}\n${global.themeemoji} Author : ${i.author.name}\n${global.themeemoji} Url : ${i.url}\n\n─────────────────\n\n`
+teks += `➢ No : ${no++}\n➢ Type : ${i.type}\n➢ Video ID : ${i.videoId}\n➢ Title : ${i.title}\n➢ Views : ${i.views}\n➢ Duration : ${i.timestamp}\n➢ Uploaded : ${i.ago}\n➢ Author : ${i.author.name}\n➢ Url : ${i.url}\n\n─────────────────\n\n`
 }
 XeonBotInc.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: m })
 }
@@ -6125,9 +6125,9 @@ let google = require('google-it')
 google({'query': args.join(" ")}).then(res => {
 let teks = `Google Search From : ${text}\n\n`
 for (let g of res) {
-teks += `${global.themeemoji} *Title* : ${g.title}\n`
-teks += `${global.themeemoji} *Description* : ${g.snippet}\n`
-teks += `${global.themeemoji} *Link* : ${g.link}\n\n────────────────────────\n\n`
+teks += `➢ *Title* : ${g.title}\n`
+teks += `➢ *Description* : ${g.snippet}\n`
+teks += `➢ *Link* : ${g.link}\n\n────────────────────────\n\n`
 } 
 reply(teks)
 })
@@ -6148,14 +6148,14 @@ let buttonMessage = {
 image: { url: images },
 caption: `*| GOOGLE IMAGE |*
 
-${global.themeemoji} Query : ${text}
-${global.themeemoji} Media Url : ${images}`,
-footer: `${global.botname}`,
+➢ Query : ${text}
+➢ Media Url : ${images}`,
+footer: ` `,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
-title:`${global.ownername}`,
-body:`${global.watermark}`,
+title:` `,
+body:` `,
 thumbnail: log0,
 mediaType:2,
 mediaUrl: `${global.websitex}`,
@@ -6174,7 +6174,7 @@ try {
 hx.igstory(args[0]).then(async(resed) => {
 ini_anu = []
 anu_list = []
-textbv = `*| INSTAGRAM STORY |*\n\n${global.themeemoji} Username : ${resed.user.username ? resed.user.name : "undefined"}\n${global.themeemoji} Followers : ${resed.user.followers}`
+textbv = `*| INSTAGRAM STORY |*\n\n➢ Username : ${resed.user.username ? resed.user.name : "undefined"}\n➢ Followers : ${resed.user.followers}`
 urut = 1
 for (let i = 0; i < resed.medias.length; i++) {
 ini_anu.push({
@@ -6254,7 +6254,7 @@ try {
 hx.igdl(args[0]).then(async(resed) => {
 ini_anu = []
 anu_list = []
-textbv = `*| INSTAGRAM DOWNLOADER |*\n\n${global.themeemoji} Username : ${resed.user.username ? resed.user.name : "undefined"}\n${global.themeemoji} Followers : ${resed.user.followers}`
+textbv = `*| INSTAGRAM DOWNLOADER |*\n\n➢ Username : ${resed.user.username ? resed.user.name : "undefined"}\n➢ Followers : ${resed.user.followers}`
 urut = 1
 for (let i = 0; i < resed.medias.length; i++) {
 ini_anu.push({
@@ -7478,7 +7478,7 @@ case 'shortstoryx':{
 if (isBanChat) return reply(mess.banChat)
 if (!q) return reply(`*List*\n${prefix}shortstory Anak\n${prefix}shortstory Bahasa Daerah\n${prefix}shortstory Bahasa Inggris\n${prefix}shortstory Bahasa Jawa\n${prefix}shortstory Bahasa Sunda\n${prefix}shortstory Budaya\n${prefix}shortstory Cinta\n${prefix}shortstory Cinta Islami\n${prefix}shortstory Cinta Pertama\n${prefix}shortstory Cinta Romantis\n${prefix}shortstory Cinta Sedih\n${prefix}shortstory Cinta Segitiga\n${prefix}shortstory Cinta Sejati\n${prefix}shortstory Galau\n${prefix}shortstory Gokil\n${prefix}shortstory Inspiratif\n${prefix}shortstory Jepang\n${prefix}shortstory Kehidupan\n${prefix}shortstory Keluarga\n${prefix}shortstory Kisah Nyata\n${prefix}shortstory Korea\n${prefix}shortstory Kristen\n${prefix}shortstory Liburan\n${prefix}shortstory Lingkungan\n${prefix}shortstory Lucu\n${prefix}shortstory Malaysia\n${prefix}shortstory Mengharukan\n${prefix}shortstory Misteri\n${prefix}shortstory Motivasi\n${prefix}shortstory Nasihat\n${prefix}shortstory Nasionalisme\n${prefix}shortstory Olahraga\n${prefix}shortstory Patah Hati\n${prefix}shortstory Penantian\n${prefix}shortstory Pendidikan\n${prefix}shortstory Pengalaman Pribadi\n${prefix}shortstory Pengorbanan\n${prefix}shortstory Penyesalan\n${prefix}shortstory Perjuangan\n${prefix}shortstory Perpisahan\n${prefix}shortstory Persahabatan\n${prefix}shortstory Petualangan\n${prefix}shortstory Ramadhan\n${prefix}shortstory Remaja\n${prefix}shortstory Renungan\n${prefix}shortstory Rindu\n${prefix}shortstory Rohani\n${prefix}shortstory Romantis\n${prefix}shortstory Sastra\n${prefix}shortstory Sedih\n${prefix}shortstory Sejarah\n${prefix}shortstory Slice Of Life\n${prefix}shortstory Terjemahan\n${prefix}shortstory Thriller`)
 let cerpe = await cerpen(q)
-reply(`${global.themeemoji} _*Title :*_ ${cerpe.title}\n${global.themeemoji} _*Author :*_ ${cerpe.author}\n${global.themeemoji} _*Category :*_ ${cerpe.kategori}\n${global.themeemoji} _*Pass Moderation :*_ ${cerpe.lolos}\n${global.themeemoji} _*Story :*_\n${cerpe.cerita}`)
+reply(`➢ _*Title :*_ ${cerpe.title}\n➢ _*Author :*_ ${cerpe.author}\n➢ _*Category :*_ ${cerpe.kategori}\n➢ _*Pass Moderation :*_ ${cerpe.lolos}\n➢ _*Story :*_\n${cerpe.cerita}`)
 }
 break
 case 'loveshortstoryx':{
@@ -8013,22 +8013,22 @@ let buttonMessage = {
 image: { url: anu.thumbnail },
 caption: `*| YOUTUBE PLAY |*
 
-${global.themeemoji} Title : ${anu.title}
-${global.themeemoji} Ext : Search
-${global.themeemoji} ID : ${anu.videoId}
-${global.themeemoji} Duration : ${anu.timestamp}
-${global.themeemoji} Viewers : ${anu.views}
-${global.themeemoji} Uploaded : ${anu.ago}
-${global.themeemoji} Author : ${anu.author.name}
-${global.themeemoji} Channel : ${anu.author.url}
-${global.themeemoji} Description : ${anu.description}
-${global.themeemoji} Url : ${anu.url}`,
-footer: `${global.botname}`,
+➢ Title : ${anu.title}
+➢ Ext : Search
+➢ ID : ${anu.videoId}
+➢ Duration : ${anu.timestamp}
+➢ Viewers : ${anu.views}
+➢ Uploaded : ${anu.ago}
+➢ Author : ${anu.author.name}
+➢ Channel : ${anu.author.url}
+➢ Description : ${anu.description}
+➢ Url : ${anu.url}`,
+footer: ` choose the type of vidio or audio`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: anu.title,
-body: `${global.botname}`,
+body: ` `,
 thumbnail: log0,
 mediaType:2,
 mediaUrl: anu.url,
@@ -8046,9 +8046,9 @@ try {
 hx.youtube(args[0]).then(async(res) => {
 textyt = `*| YOUTUBE DOWNLOADER |*
 
-${global.themeemoji} Title : ${res.title}
-${global.themeemoji} Size : ${res.size}
-${global.themeemoji} Quality : ${res.quality}
+➢ Title : ${res.title}
+➢ Size : ${res.size}
+➢ Quality : ${res.quality}
 
 _Select video or audio and wait a while_`
 let buttons = [
