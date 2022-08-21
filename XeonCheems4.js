@@ -8687,8 +8687,8 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 setbot.templateImage = false
                 setbot.templateVideo = false
                 setbot.templateGif = false
-                setbot.templateMsg = true
-                setbot.templateDocument = false
+                setbot.templateMsg = false
+                setbot.templateDocument =true
                 reply(mess.success)
                 } else {
                 let sections = [
@@ -8815,7 +8815,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"title": "Other",
 										"description": "Displays The List Of Other Features",
 										"rowId": `${prefix}othermenu`
-									}
+									},
 								{
 										"title": "All Menu",
 										"description": "Displays The List Of All The Features!",
@@ -8920,12 +8920,12 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 											"title": "Horoscope Menu",
 										"description": "Displays The List Of Horoscope Features",
 										"rowId": `${prefix}indohoroscopemenu`
-										}
+										},
 								{
 										"title": "Anonymous Chat Menu",
 										"description": "Displays The List Of Anonymous Chat Features",
 										"rowId": `${prefix}anonymousmenu`
-									}
+									},
 								{
 										"title": "\n ɪ ʟᴏᴠᴇ ʏᴏᴜ ᴋɪᴀɴ",
 										"rowId": `wkwkkwk`
@@ -10608,7 +10608,7 @@ const listTag = [`${global.ownertag}@s.whatsapp.net`]
 const partiNum = (m.mtype === 'extendedTextMessage') ? m.message.extendedTextMessage.contextInfo.participant : ''
 //anti-tag 2
 if (listTag.includes(partiNum)) {
-if (antitags === true) return
+if (antitags === false) return
 if (!m.isGroup) return
 if (m.key.fromMe) return
 sendNye = fs.readFileSync('./XeonMedia/theme/yourtag.webp')
@@ -10617,7 +10617,7 @@ XeonBotInc.sendMessage(from, {sticker:sendNye, contextInfo:{forwardingScore: 800
 }
 //anti-tag 3
 if (budy.includes(`${global.ownertag}`)) {
-if (antitags === true) return
+if (antitags === false) return
 if (!m.isGroup) return
 if (m.key.fromMe) return
 sendNye = fs.readFileSync('./XeonMedia/theme/yourtag.webp')
