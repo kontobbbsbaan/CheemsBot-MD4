@@ -8809,6 +8809,9 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                     footerText: `ᴛʜᴇ sɪᴍᴘʟᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ʙʏ ᴋɪᴀɴ`,
                     listType: "SINGLE_SELECT",
                     sections: [{
+								"title": "   ",
+								"rows": [
+									{
 										"title": "Other",
 										"description": "Displays The List Of Other Features",
 										"rowId": `${prefix}othermenu`
