@@ -64,7 +64,7 @@ global.location = "Indonesian" //ur location
 global.owner = ['6283845409710']
 global.ownertag = '6283845409710' //ur tag number
 global.botname = '𝑀𝑂𝐷𝑍 𝐵𝑂𝑇𝑍' //ur bot name
-global.linkz = "https://saweria.co/Kianganz" //your theme url which will be displayed on whatsapp
+global.linkz = "https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg" //your theme url which will be displayed on whatsapp
 global.websitex = "https://github.com/Kianganz1" //ur website to be displayed
 global.botscript = 'https://github.com/DGXeon/CheemsBot-MD4' //script link
 global.reactmoji = "🤬" //ur menu react emoji
@@ -105,20 +105,20 @@ global.antitags = true
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
-    success: 'Nih Kak >_<',
-    admin: 'Fitur Hanya Khusus Buat Admin Grub!',
-    botAdmin: 'Jadikan Bot Sebagai Admin!',
-    owner: 'Fitur Hanya Khusus Buat Owner!',
-    group: 'Fitur Hanya Dapat Di Gunakan Di Grub!',
-    private: 'Fitur Hanya Khusu Privat Chat!',
-    bot: 'Khusus Bot',
-    wait: 'Tunggu Banh...',
+    success: 'Done',
+    admin: 'Only For Admin Group!',
+    botAdmin: 'Bot Not Admin',
+    owner: 'Only For Owner!',
+    group: 'Fitur Only For Group!',
+    private: 'Fitur Only Privat Chat!',
+    bot: '',
+    wait: 'Wait...',
     linkm: 'Link?',
     error: 'Eror!!',
-    endLimit: 'Limit Kamu Habis',
-    ban: 'Kamu Telah Di Banned Oleh Bot',
-    nsfw: 'Nsfw Tidak Di Aktifkan Oleh Owner',
-    banChat: 'Bot Telah Di Banned Di Grub ini'
+    endLimit: 'You Limit 0',
+    ban: 'You Has Ban',
+    nsfw: 'Nsfw For Owner Only',
+    banChat: 'Bot Has Ban In Group'
 }
     global.limitawal = {
     premium: "Infinity",
