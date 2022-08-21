@@ -8670,21 +8670,21 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 setbot.templateLocation = false
                 reply(mess.success)
                 } else if (args[0] === 'templateGif'){
-                setbot.templateImage = true
+                setbot.templateImage = false
                 setbot.templateVideo = false
                 setbot.templateGif = true
                 setbot.templateMsg = false
                 setbot.templateDocument = false
                 reply(mess.success)
                 //} else if (args[0] === 'templateMessage'){
-                /////setbot.templateImage = true
+                /////setbot.templateImage = false
                 /////setbot.templateVideo = false
                 /////setbot.templateGif = false
                 /////setbot.templateMsg = true
                 //////setbot.templateDocument = false
                 //////reply(mess.success)
                 } else if (args[0] === 'templateDocument'){
-                setbot.templateImage = true
+                setbot.templateImage = false
                 setbot.templateVideo = false
                 setbot.templateGif = false
                 setbot.templateMsg = true
