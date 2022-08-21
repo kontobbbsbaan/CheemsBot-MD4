@@ -111,7 +111,7 @@ global.mess = {
     owner: 'Only For Owner!',
     group: 'Fitur Only For Group!',
     private: 'Fitur Only Privat Chat!',
-    bot: '',
+    bot: 'Fitur Only For Bot',
     wait: 'Wait...',
     linkm: 'Link?',
     error: 'Eror!!',
