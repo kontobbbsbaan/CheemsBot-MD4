@@ -8670,21 +8670,21 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 setbot.templateLocation = false
                 reply(mess.success)
                 } else if (args[0] === 'templateGif'){
-                setbot.templateImage = false
+                setbot.templateImage = true
                 setbot.templateVideo = false
                 setbot.templateGif = true
                 setbot.templateMsg = false
                 setbot.templateDocument = false
                 reply(mess.success)
                 //} else if (args[0] === 'templateMessage'){
-                /////setbot.templateImage = false
+                /////setbot.templateImage = true
                 /////setbot.templateVideo = false
                 /////setbot.templateGif = false
                 /////setbot.templateMsg = true
                 //////setbot.templateDocument = false
                 //////reply(mess.success)
                 } else if (args[0] === 'templateDocument'){
-                setbot.templateImage = false
+                setbot.templateImage = true
                 setbot.templateVideo = false
                 setbot.templateGif = false
                 setbot.templateMsg = true
@@ -8804,104 +8804,131 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Hallo ${pushname} 👋`,
-                    description: `Please Choose The Menu\n`,
+                    description: `Please Choose The Menu`,
                     buttonText: "CLICK HERE",
-                    footerText: ` `,
+                    footerText: `ᴛʜᴇ sɪᴍᴘʟᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ʙʏ ᴋɪᴀɴ`,
                     listType: "SINGLE_SELECT",
                     sections: [{
 								"title": " Please select ",
 								"rows": [
 									{
-										"title": "Other\n_Display list other menu_",
+										"title": "Other",
+										"description": "Displays The List Of Other Features",
 										"rowId": `${prefix}othermenu`
-									},
+									}
 								{
-										"title": "All Menu\n_Display list all menu_",
+										"title": "All Menu",
+										"description": "Displays The List Of All The Features!",
 										"rowId": `${prefix}allmenu`
 									},
 									{
-										"title": "Owner Menu\n_Display list owner menu_",
+										"title": "Owner Menu",
+										"description": "Displays The List Of Owner Features",
 										"rowId": `${prefix}ownermenu`
 										},
 									{
-										"title": "Group Menu\n_Display list group menu_",
+										"title": "Group Menu",
+										"description": "Displays The List Of Main Features",
 										"rowId": `${prefix}groupmenu`
 										},
 										{
-										"title": "Maker\nDisplay list maker menu",
+										"title": "Maker Menu",
+										"description": "Displays The List Of Logo Making Features",
 										"rowId": `${prefix}indomenu`
 									},
 									{
-										"title": "Sound\nDisplay list Sound menu",
+										"title": "Sound Menu",
+										"description": "Displays The List Of Sound Features",
 										"rowId": `${prefix}soundmenu`
 									},
 									{
-										"title": "Download\n_Display list donwload menu_",
+										"title": "Download Menu",
+										"description": "Displays The List Of Download Features",
 										"rowId": `${prefix}downloadmenu`
 									},
 									{
-										"title": "Sticker\n_Display list sticker_",
+										"title": "Sticker Menu",
+										"description": "Displays The List Of Sticker Features",
 										"rowId": `${prefix}indomenu`
 									},
 									{
-										"title": "Search\n_Display list search menu_",
+										"title": "Search Menu",
+										"description": "Displays The List Of Searching Features",
 										"rowId": `${prefix}searchmenu`
 									},
 									{
-										"title": "Tool\n_Display list tool menu_",
+										"title": "Tool Menu",
+										"description": "Displays The List Of Tool Features",
 										"rowId": `${prefix}toolmenu`
 									},
 									{
-										"title": "Random Image \n_Display list random image_",
+										"title": "Random Image Menu",
+										"description": "Displays The List Of Random Image Features",
 										"rowId": `${prefix}randomimagemenu`
 									},
 									{
-										"title": "Image Effect\n_Display list image effect_",
+										"title": "Image Effect Menu",
+										"description": "Displays The List Of Image Effect Features",
 										"rowId": `${prefix}imageeffectmenu`
 									},
 										{
-											"title": "Anime\n_Display list anime_",
+											"title": "Anime Menu",
+										"description": "Displays The List Of Random Anime Features",
 										"rowId": `${prefix}animemenu`
 										},
 										{
-											"title": "Emote\n_Display list emot_",
+											"title": "Emote Menu",
+										"description": "Displays The List Of Emote Features",
 										"rowId": `${prefix}emotemenu`
 										},
 										{
-										"title": "Anime Sticker\n_Display list anime sticker_",
+										"title": "Anime Sticker Menu",
+										"description": "Displays The List Of Anime Sticker Features",
 										"rowId": `${prefix}animestickermenu`
 									     },
 									{
-										"title": "Nsfw\n_Display list nsfw 18+_",
+										"title": "Nsfw Menu",
+										"description": "Displays The List Of Nsfe Features",
 										"rowId": `${prefix}nsfwmenu`
 									     },
 										{
-											"title": "Fun\n_Display list fun menu_",
+											"title": "Fun Menu",
+										"description": "Displays The List Of Fun Features",
 										"rowId": `${prefix}funmenu`
 										},
 										{
-										"title": "Game\n_Display list game menu_",
+										"title": "Game Menu",
+										"description": "Displays The List Of Game Features",
 										"rowId": `${prefix}indomenu`
 									},
 										{
-											"title": "Convert\n_Display list convert_",
+											"title": "Convert Menu",
+										"description": "Displays The List Of Convert Features",
 										"rowId": `${prefix}convertmenu`
 										},
 										{
-											"title": "Database\n_Display list database_",
+											"title": "Database Menu",
+										"description": "Displays The List Of Database Features",
 										"rowId": `${prefix}databasemenu`
 										},
 										{
-										"title": "Indo\n_Display list indo menu_",
+										"title": "Indo Menu",
+										"description": "Displays The List Of Indo Features",
 										"rowId": `${prefix}indomenu`
 									},
 										{
-											"title": "Horoscope\n_Display list Horoscope menu_",
+											"title": "Horoscope Menu",
+										"description": "Displays The List Of Horoscope Features",
 										"rowId": `${prefix}indohoroscopemenu`
-										},
+										}
 								{
-										"title": "Anonymous Chat\n_Display list anonymous menu_",
+										"title": "Anonymous Chat Menu",
+										"description": "Displays The List Of Anonymous Chat Features",
 										"rowId": `${prefix}anonymousmenu`
+									}
+								{
+										"title": "\n ɪ ʟᴏᴠᴇ ʏᴏᴜ ᴋɪᴀɴ",
+										"rowId": `wkwkkwk`
 									}
 								]
 							}
@@ -10581,7 +10608,7 @@ const listTag = [`${global.ownertag}@s.whatsapp.net`]
 const partiNum = (m.mtype === 'extendedTextMessage') ? m.message.extendedTextMessage.contextInfo.participant : ''
 //anti-tag 2
 if (listTag.includes(partiNum)) {
-if (antitags === false) return
+if (antitags === true) return
 if (!m.isGroup) return
 if (m.key.fromMe) return
 sendNye = fs.readFileSync('./XeonMedia/theme/yourtag.webp')
@@ -10590,7 +10617,7 @@ XeonBotInc.sendMessage(from, {sticker:sendNye, contextInfo:{forwardingScore: 800
 }
 //anti-tag 3
 if (budy.includes(`${global.ownertag}`)) {
-if (antitags === false) return
+if (antitags === true) return
 if (!m.isGroup) return
 if (m.key.fromMe) return
 sendNye = fs.readFileSync('./XeonMedia/theme/yourtag.webp')
