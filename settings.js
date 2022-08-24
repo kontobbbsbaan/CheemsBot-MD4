@@ -46,12 +46,12 @@ global.available = true //auto available (true to on, false to off)
 global.vidmenu = fs.readFileSync("./XeonMedia/theme/Cheems-bot.mp4") //gif and video menu
 
 //documents variants
-global.doc1 = 'application/document'
-global.doc2 = 'application/document'
-global.doc3 = 'application/document'
-global.doc4 = 'application/document'
-global.doc5 = 'application/document'
-global.doc6 = 'application/document'
+global.doc1 = 'application/pdf'
+global.doc2 = 'application/pdf'
+global.doc3 = 'application/zip'
+global.doc4 = 'application/zip'
+global.doc5 = 'application/pdf'
+global.doc6 = 'application/zip'
 
 //owmner v card
 global.vcardowner = ['6283845409710'] //ur owner number
