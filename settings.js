@@ -37,7 +37,7 @@ global.APIKeys = {
 
 //aumto functioner
 global.autoTyping = false //auto tying in gc (true to on, false to off)
-global.autoreadpmngc = false //auto reading in gc and pm (true to on, false to off)
+global.autoreadpmngc = true //auto reading in gc and pm (true to on, false to off)
 global.autoReadGc = false //auto reading in gc (true to on, false to off)
 global.autoRecord = false //auto recording (true to on, false to off)
 global.available = true //auto available (true to on, false to off)
@@ -55,7 +55,7 @@ global.doc6 = 'application/vnd.android.package-archive'
 
 //owmner v card
 global.vcardowner = ['6283845409710'] //ur owner number
-global.ownername = "😈🎭𝞙𝐼𝜦𝑁 𝑀𝞚𝐾𝛴𝛤 〽️🤬" //ur owner name
+global.ownername = "Kian" //ur owner name
 global.ytname = "YT: Kian" //ur yt chanel name
 global.socialm = "GitHub: Kianganz1" //ur github or insta name
 global.location = "Indonesian" //ur location
@@ -69,7 +69,7 @@ global.websitex = "https://github.com/Kianganz1" //ur website to be displayed
 global.botscript = 'https://github.com/DGXeon/CheemsBot-MD4' //script link
 global.reactmoji = "🤬" //ur menu react emoji
 global.themeemoji = "🎭" //ur theme emoji
-global.packname = "𝞙𝐼𝜦𝑁 𝑀𝞚𝐾𝛴𝛤 " //ur sticker watermark packname
+global.packname = "By kian\ndi buat oleh bot wa\nnomerbot 085736056578" //ur sticker watermark packname
 global.author = "" //ur sticker watermark author
 
 //Bot theme media
@@ -106,18 +106,18 @@ global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
     success: 'Done',
-    admin: 'Only For Admin Group!',
-    botAdmin: 'Bot Not Admin',
-    owner: 'Only For Owner!',
-    group: 'Fitur Only For Group!',
+    admin: 'Feature Used Only For Groups!',
+    botAdmin: 'Bot Must Be Admin First',
+    owner: 'This Feature Is Only For Owner!',
+    group: 'This Feature Is Only For Admin!',
     private: 'Fitur Only Privat Chat!',
-    bot: 'Fitur Only For Bot',
+    bot: 'This Feature Is Only For Owner',
     wait: 'Wait...',
     linkm: 'Link?',
     error: 'Eror!!',
     endLimit: 'You Limit 0',
     ban: 'You Has Ban',
-    nsfw: 'Nsfw For Owner Only',
+    nsfw: 'Don't 18+ Nsfw Is Only For Owner',
     banChat: 'Bot Has Ban In Group'
 }
     global.limitawal = {
