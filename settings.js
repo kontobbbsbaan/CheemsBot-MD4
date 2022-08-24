@@ -36,9 +36,9 @@ global.APIKeys = {
 
 
 //aumto functioner
-global.autoTyping = false //auto tying in gc (true to on, false to off)
+global.autoTyping = true //auto tying in gc (true to on, false to off)
 global.autoreadpmngc = true //auto reading in gc and pm (true to on, false to off)
-global.autoReadGc = false //auto reading in gc (true to on, false to off)
+global.autoReadGc = true //auto reading in gc (true to on, false to off)
 global.autoRecord = false //auto recording (true to on, false to off)
 global.available = true //auto available (true to on, false to off)
 
@@ -46,12 +46,12 @@ global.available = true //auto available (true to on, false to off)
 global.vidmenu = fs.readFileSync("./XeonMedia/theme/Cheems-bot.mp4") //gif and video menu
 
 //documents variants
-global.doc1 = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-global.doc2 = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-global.doc3 = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
-global.doc4 = 'application/zip'
-global.doc5 = 'application/pdf'
-global.doc6 = 'application/vnd.android.package-archive'
+global.doc1 = 'application/document'
+global.doc2 = 'application/document'
+global.doc3 = 'application/document'
+global.doc4 = 'application/document'
+global.doc5 = 'application/document'
+global.doc6 = 'application/document'
 
 //owmner v card
 global.vcardowner = ['6283845409710'] //ur owner number
@@ -63,7 +63,7 @@ global.location = "Indonesian" //ur location
 //bot bomdy 
 global.owner = ['6283845409710']
 global.ownertag = '6283845409710' //ur tag number
-global.botname = '𝑀𝑂𝐷𝑍 𝐵𝑂𝑇𝑍' //ur bot name
+global.botname = 'MODZ BOTZ OFC' //ur bot name
 global.linkz = "https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg" //your theme url which will be displayed on whatsapp
 global.websitex = "https://github.com/Kianganz1" //ur website to be displayed
 global.botscript = 'https://github.com/DGXeon/CheemsBot-MD4' //script link
