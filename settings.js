@@ -46,12 +46,12 @@ global.available = true //auto available (true to on, false to off)
 global.vidmenu = fs.readFileSync("./XeonMedia/theme/Cheems-bot.mp4") //gif and video menu
 
 //documents variants
-global.doc1 = 'application/pdf'
-global.doc2 = 'application/pdf'
-global.doc3 = 'application/zip'
+global.doc1 = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+global.doc2 = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+global.doc3 = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
 global.doc4 = 'application/zip'
 global.doc5 = 'application/pdf'
-global.doc6 = 'application/zip'
+global.doc6 = 'application/vnd.android.package-archive'
 
 //owmner v card
 global.vcardowner = ['6283845409710'] //ur owner number
@@ -105,20 +105,20 @@ global.antitags = true
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
-    success: 'Done',
-    admin: 'Feature Used Only For Groups!',
-    botAdmin: 'Bot Must Be Admin First',
+    success: 'Done ✓',
+    admin: 'This Feature Is Only For Admin!',
+    botAdmin: 'Bot Must Be Admin First!',
     owner: 'This Feature Is Only For Owner!',
-    group: 'This Feature Is Only For Admin!',
-    private: 'Fitur Only Privat Chat!',
-    bot: 'This Feature Is Only For Owner',
-    wait: 'Wait...',
-    linkm: 'Link?',
-    error: 'Eror!!',
-    endLimit: 'You Limit 0',
-    ban: 'You Has Ban',
-    nsfw: 'Don't 18+ Nsfw Is Only For Owner',
-    banChat: 'Bot Has Ban In Group'
+    group: 'Feature Used Only For Groups!',
+    private: 'Features Used Only For Private Chat!',
+    bot: 'This Feature Is Only For Bot',
+    wait: 'In process...',
+    linkm: 'Where is the link?',
+    error: 'Error!!',
+    endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 12 Hours',
+    ban: 'You have been banned by the owner, if you want to be unbanned, chat owner.',
+    nsfw: 'The nsfw feature has not been activated, please contact the admin to activate',
+    banChat: 'The bot was banned in this group, please contact the owner to unban'
 }
     global.limitawal = {
     premium: "Infinity",
