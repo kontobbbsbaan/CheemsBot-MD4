@@ -8803,132 +8803,249 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
 	if (isBanChat) return reply(mess.banChat)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
-                    title: `Hallo ${pushname} 👋`,
-                    description: `Please Choose The Menu`,
-                    buttonText: "CLICK HERE",
-                    footerText: `ᴛʜᴇ sɪᴍᴘʟᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ʙʏ ᴋɪᴀɴ`,
+                    title: ``,
+                    description: `Please Choose The Menu *${pushname}*`,
+                    buttonText: "CLICK HERE📖",
+                    footerText: ``,
                     listType: "SINGLE_SELECT",
                     sections: [{
-								"title": "   ",
+								"title": "❀•°•═════ஓ๑♡๑ஓ═════•°•❀",
 								"rows": [
 									{
-										"title": "Other",
+										"title": "Other 😎",
 										"description": "Displays The List Of Other Features",
 										"rowId": `${prefix}othermenu`
-									},
-								{
-										"title": "All Menu",
+									}
+								]
+							},
+							{
+								"title": "✨•.:°❀×═════════×❀°:.•
+✨"rows": [
+									{
+										"title": "All Menu 😗",
 										"description": "Displays The List Of All The Features!",
 										"rowId": `${prefix}allmenu`
-									},
+									}
+								]
+							},
+							{
+								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
+🌷"rows": [
 									{
-										"title": "Owner Menu",
+										"title": "Owner Menu 🤪",
 										"description": "Displays The List Of Owner Features",
 										"rowId": `${prefix}ownermenu`
-										},
+										}
+								]
+							},
+							{
+								"title": "✨•.:°❀×═════════×❀°:.•
+✨"rows": [
 									{
-										"title": "Group Menu",
+										"title": "Group Menu 🤭",
 										"description": "Displays The List Of Main Features",
 										"rowId": `${prefix}groupmenu`
-										},
-										{
-										"title": "Maker Menu",
+										}
+								]
+							},
+							{
+								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
+🌷"rows": [
+									{
+										"title": "Maker Menu 🤩",
 										"description": "Displays The List Of Logo Making Features",
 										"rowId": `${prefix}indomenu`
-									},
+									}
+								]
+							},
+							{
+								"title": "✨•.:°❀×═════════×❀°:.•
+✨"rows": [
 									{
-										"title": "Sound Menu",
+										"title": "Sound Menu 🤠",
 										"description": "Displays The List Of Sound Features",
 										"rowId": `${prefix}soundmenu`
-									},
+									}
+								]
+							},
+							{
+								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
+🌷"rows": [
 									{
-										"title": "Download Menu",
+										"title": "Download Menu 😛",
 										"description": "Displays The List Of Download Features",
 										"rowId": `${prefix}downloadmenu`
-									},
+									}
+								]
+							},
+							{
+								"title": "✨•.:°❀×═════════×❀°:.•
+✨"rows": [
 									{
-										"title": "Sticker Menu",
+										"title": "Sticker Menu 🤗",
 										"description": "Displays The List Of Sticker Features",
 										"rowId": `${prefix}indomenu`
-									},
+									}
+								]
+							},
+							{
+								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
+🌷"rows": [
 									{
-										"title": "Search Menu",
+										"title": "Search Menu 🧐",
 										"description": "Displays The List Of Searching Features",
 										"rowId": `${prefix}searchmenu`
-									},
+									}
+								]
+							},
+							{
+								"title": "✨•.:°❀×═════════×❀°:.•
+✨"rows": [
 									{
-										"title": "Tool Menu",
+										"title": "Tool Menu 😌",
 										"description": "Displays The List Of Tool Features",
 										"rowId": `${prefix}toolmenu`
-									},
+									}
+								]
+							},
+							{
+								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
+🌷"rows": [
 									{
-										"title": "Random Image Menu",
+										"title": "Random Image Menu 😀",
 										"description": "Displays The List Of Random Image Features",
 										"rowId": `${prefix}randomimagemenu`
-									},
+									}
+								]
+							},
+							{
+								"title": "✨•.:°❀×═════════×❀°:.•
+✨"rows": [
 									{
-										"title": "Image Effect Menu",
+										"title": "Image Effect Menu ☺",
 										"description": "Displays The List Of Image Effect Features",
 										"rowId": `${prefix}imageeffectmenu`
-									},
-										{
-											"title": "Anime Menu",
+									}
+								]
+							},
+							{
+								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
+🌷"rows": [
+									{
+											"title": "Anime Menu 😘",
 										"description": "Displays The List Of Random Anime Features",
 										"rowId": `${prefix}animemenu`
-										},
-										{
-											"title": "Emote Menu",
+										}
+								]
+							},
+							{
+								"title": "✨•.:°❀×═════════×❀°:.•
+✨"rows": [
+									{
+											"title": "Emote Menu 😀",
 										"description": "Displays The List Of Emote Features",
 										"rowId": `${prefix}emotemenu`
-										},
-										{
-										"title": "Anime Sticker Menu",
+										}
+								]
+							},
+							{
+								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
+🌷"rows": [
+									{
+										"title": "Anime Sticker Menu ☺️",
 										"description": "Displays The List Of Anime Sticker Features",
 										"rowId": `${prefix}animestickermenu`
-									     },
+									     }
+								]
+							},
+							{
+								"title": "✨•.:°❀×═════════×❀°:.•
+✨"rows": [
 									{
-										"title": "Nsfw Menu",
+										"title": "Nsfw Menu 🤓",
 										"description": "Displays The List Of Nsfe Features",
 										"rowId": `${prefix}nsfwmenu`
-									     },
-										{
-											"title": "Fun Menu",
+									     }
+								]
+							},
+							{
+								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
+🌷"rows": [
+									{
+											"title": "Fun Menu 🥳",
 										"description": "Displays The List Of Fun Features",
 										"rowId": `${prefix}funmenu`
-										},
-										{
-										"title": "Game Menu",
+										}
+								]
+							},
+							{
+								"title": "✨•.:°❀×═════════×❀°:.•
+✨"rows": [
+									{
+										"title": "Game Menu 🎮",
 										"description": "Displays The List Of Game Features",
 										"rowId": `${prefix}indomenu`
-									},
-										{
-											"title": "Convert Menu",
+									}
+								]
+							},
+							{
+								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
+🌷"rows": [
+									{
+											"title": "Convert Menu 😶",
 										"description": "Displays The List Of Convert Features",
 										"rowId": `${prefix}convertmenu`
-										},
-										{
-											"title": "Database Menu",
+										}
+								]
+							},
+							{
+								"title": "✨•.:°❀×═════════×❀°:.•
+✨"rows": [
+									{
+											"title": "Database Menu 😎",
 										"description": "Displays The List Of Database Features",
 										"rowId": `${prefix}databasemenu`
-										},
-										{
-										"title": "Indo Menu",
+										}
+								]
+							},
+							{
+								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
+🌷"rows": [
+									{
+										"title": "Indo Menu  🤗",
 										"description": "Displays The List Of Indo Features",
 										"rowId": `${prefix}indomenu`
-									},
-										{
-											"title": "Horoscope Menu",
+									}
+								]
+							},
+							{
+								"title": "✨•.:°❀×═════════×❀°:.•
+✨"rows": [
+									{
+											"title": "Horoscope Menu 🤪",
 										"description": "Displays The List Of Horoscope Features",
 										"rowId": `${prefix}indohoroscopemenu`
-										},
-								{
-										"title": "Anonymous Chat Menu",
+										}
+								]
+							},
+							{
+								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
+🌷"rows": [
+									{
+										"title": "Anonymous Chat Menu 🤭",
 										"description": "Displays The List Of Anonymous Chat Features",
 										"rowId": `${prefix}anonymousmenu`
-									},
-								{
-										"title": "\n ɪ ʟᴏᴠᴇ ʏᴏᴜ ᴋɪᴀɴ",
-										"rowId": `wkwkkwk`
+									}
+								]
+							},
+							{
+								"title": "✨•.:°❀×═════════×❀°:.•
+✨",
+								"rows": [
+									{
+										"title": "Thanks To 🤗",
+										"description": "Displays The List Of Credit Of The Bot !!",
+										"rowId": `${prefix}tqtt`
 									}
 								]
 							}
@@ -10544,7 +10661,8 @@ case 'tqtt':
 	if (isBanChat) return reply(mess.banChat)
 reply(`Thanks to
 LORD BUDDHA
-Xeon (Me)
+Xeon
+Kianganz1
 My family
 And all friends who helped assemble this sexy script !!!`)
 break
@@ -10608,7 +10726,7 @@ const listTag = [`${global.ownertag}@s.whatsapp.net`]
 const partiNum = (m.mtype === 'extendedTextMessage') ? m.message.extendedTextMessage.contextInfo.participant : ''
 //anti-tag 2
 if (listTag.includes(partiNum)) {
-if (antitags === false) return
+if (antitags === true) return
 if (!m.isGroup) return
 if (m.key.fromMe) return
 sendNye = fs.readFileSync('./XeonMedia/theme/yourtag.webp')
@@ -10617,7 +10735,7 @@ XeonBotInc.sendMessage(from, {sticker:sendNye, contextInfo:{forwardingScore: 800
 }
 //anti-tag 3
 if (budy.includes(`${global.ownertag}`)) {
-if (antitags === false) return
+if (antitags === true) return
 if (!m.isGroup) return
 if (m.key.fromMe) return
 sendNye = fs.readFileSync('./XeonMedia/theme/yourtag.webp')
