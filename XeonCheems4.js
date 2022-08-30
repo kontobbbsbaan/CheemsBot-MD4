@@ -8989,8 +8989,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								]
 							},
 							{
-								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
-🌷"rows": [
+								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇🌷"rows": [
 									{
 											"title": "Convert Menu 😶",
 										"description": "Displays The List Of Convert Features",
@@ -8999,8 +8998,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								]
 							},
 							{
-								"title": "✨•.:°❀×═════════×❀°:.•
-✨"rows": [
+								"title": "✨•.:°❀×═════════×❀°:.•✨"rows": [
 									{
 											"title": "Database Menu 😎",
 										"description": "Displays The List Of Database Features",
@@ -9009,8 +9007,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								]
 							},
 							{
-								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
-🌷"rows": [
+								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇🌷"rows": [
 									{
 										"title": "Indo Menu  🤗",
 										"description": "Displays The List Of Indo Features",
@@ -9019,8 +9016,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								]
 							},
 							{
-								"title": "✨•.:°❀×═════════×❀°:.•
-✨"rows": [
+								"title": "✨•.:°❀×═════════×❀°:.•✨"rows": [
 									{
 											"title": "Horoscope Menu 🤪",
 										"description": "Displays The List Of Horoscope Features",
@@ -9029,8 +9025,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								]
 							},
 							{
-								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
-🌷"rows": [
+								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇🌷"rows": [
 									{
 										"title": "Anonymous Chat Menu 🤭",
 										"description": "Displays The List Of Anonymous Chat Features",
@@ -9039,8 +9034,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								]
 							},
 							{
-								"title": "✨•.:°❀×═════════×❀°:.•
-✨",
+								"title": "✨•.:°❀×═════════×❀°:.•✨",
 								"rows": [
 									{
 										"title": "Thanks To 🤗",
@@ -10726,7 +10720,7 @@ const listTag = [`${global.ownertag}@s.whatsapp.net`]
 const partiNum = (m.mtype === 'extendedTextMessage') ? m.message.extendedTextMessage.contextInfo.participant : ''
 //anti-tag 2
 if (listTag.includes(partiNum)) {
-if (antitags === true) return
+if (antitags === false) return
 if (!m.isGroup) return
 if (m.key.fromMe) return
 sendNye = fs.readFileSync('./XeonMedia/theme/yourtag.webp')
@@ -10735,7 +10729,7 @@ XeonBotInc.sendMessage(from, {sticker:sendNye, contextInfo:{forwardingScore: 800
 }
 //anti-tag 3
 if (budy.includes(`${global.ownertag}`)) {
-if (antitags === true) return
+if (antitags === false) return
 if (!m.isGroup) return
 if (m.key.fromMe) return
 sendNye = fs.readFileSync('./XeonMedia/theme/yourtag.webp')
