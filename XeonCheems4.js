@@ -8803,134 +8803,147 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
 	if (isBanChat) return reply(mess.banChat)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
-                    title: ``,
-                    description: `Please Choose The Menu *${pushname}*`,
-                    buttonText: "CLICK HERE📖",
-                    footerText: ``,
+                    title: `Hallo ${pushname} 👋`,
+                    description: `Please Choose The Menu`,
+                    buttonText: "CLICK HERE",
+                    footerText: `ᴛʜᴇ sɪᴍᴘʟᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ʙʏ ᴋɪᴀɴ`,
                     listType: "SINGLE_SELECT",
                     sections: [{
-								"title": "❀•°•═════ஓ๑♡๑ஓ═════•°•❀",
+								"title": "😎•.:°❀×═════════×❀°:.•
+😎",
 								"rows": [
 									{
-										"title": "Other 😎",
+										"title": "Other ☕",
 										"description": "Displays The List Of Other Features",
 										"rowId": `${prefix}othermenu`
 									}
 								]
 							},
 							{
-								"title": "✨•.:°❀×═════════×❀°:.•
-✨"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
-										"title": "All Menu 😗",
+										"title": "All Menu 🥀",
 										"description": "Displays The List Of All The Features!",
 										"rowId": `${prefix}allmenu`
 									}
 								]
 							},
 							{
-								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
-🌷"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
-										"title": "Owner Menu 🤪",
+										"title": "Owner Menu 💠",
 										"description": "Displays The List Of Owner Features",
 										"rowId": `${prefix}ownermenu`
 										}
 								]
 							},
 							{
-								"title": "✨•.:°❀×═════════×❀°:.•
-✨"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
-										"title": "Group Menu 🤭",
+										"title": "Group Menu ✨",
 										"description": "Displays The List Of Main Features",
 										"rowId": `${prefix}groupmenu`
 										}
 								]
 							},
 							{
-								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
-🌷"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
-										"title": "Maker Menu 🤩",
+										"title": "Maker Menu 🌈",
 										"description": "Displays The List Of Logo Making Features",
 										"rowId": `${prefix}indomenu`
 									}
 								]
 							},
 							{
-								"title": "✨•.:°❀×═════════×❀°:.•
-✨"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
-										"title": "Sound Menu 🤠",
+										"title": "Sound Menu 🎵",
 										"description": "Displays The List Of Sound Features",
 										"rowId": `${prefix}soundmenu`
 									}
 								]
 							},
 							{
-								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
-🌷"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
-										"title": "Download Menu 😛",
+										"title": "Download Menu ↘️",
 										"description": "Displays The List Of Download Features",
 										"rowId": `${prefix}downloadmenu`
 									}
 								]
 							},
 							{
-								"title": "✨•.:°❀×═════════×❀°:.•
-✨"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
-										"title": "Sticker Menu 🤗",
+										"title": "Sticker Menu 🃏",
 										"description": "Displays The List Of Sticker Features",
 										"rowId": `${prefix}indomenu`
 									}
 								]
 							},
 							{
-								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
-🌷"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
-										"title": "Search Menu 🧐",
+										"title": "Search Menu 🔎",
 										"description": "Displays The List Of Searching Features",
 										"rowId": `${prefix}searchmenu`
 									}
 								]
 							},
 							{
-								"title": "✨•.:°❀×═════════×❀°:.•
-✨"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
-										"title": "Tool Menu 😌",
+										"title": "Tool Menu ⚙️",
 										"description": "Displays The List Of Tool Features",
 										"rowId": `${prefix}toolmenu`
 									}
 								]
 							},
 							{
-								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
-🌷"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
-										"title": "Random Image Menu 😀",
+										"title": "Random Image Menu 🌆",
 										"description": "Displays The List Of Random Image Features",
 										"rowId": `${prefix}randomimagemenu`
 									}
 								]
 							},
 							{
-								"title": "✨•.:°❀×═════════×❀°:.•
-✨"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
-										"title": "Image Effect Menu ☺",
+										"title": "Image Effect Menu 🖼️",
 										"description": "Displays The List Of Image Effect Features",
 										"rowId": `${prefix}imageeffectmenu`
 									}
 								]
 							},
 							{
-								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
-🌷"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
 											"title": "Anime Menu 😘",
 										"description": "Displays The List Of Random Anime Features",
@@ -8939,8 +8952,9 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								]
 							},
 							{
-								"title": "✨•.:°❀×═════════×❀°:.•
-✨"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
 											"title": "Emote Menu 😀",
 										"description": "Displays The List Of Emote Features",
@@ -8949,8 +8963,9 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								]
 							},
 							{
-								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
-🌷"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
 										"title": "Anime Sticker Menu ☺️",
 										"description": "Displays The List Of Anime Sticker Features",
@@ -8959,8 +8974,9 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								]
 							},
 							{
-								"title": "✨•.:°❀×═════════×❀°:.•
-✨"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
 										"title": "Nsfw Menu 🤓",
 										"description": "Displays The List Of Nsfe Features",
@@ -8969,18 +8985,20 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								]
 							},
 							{
-								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇
-🌷"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
-											"title": "Fun Menu 🥳",
+											"title": "Fun Menu 🕺",
 										"description": "Displays The List Of Fun Features",
 										"rowId": `${prefix}funmenu`
 										}
 								]
 							},
 							{
-								"title": "✨•.:°❀×═════════×❀°:.•
-✨"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
 										"title": "Game Menu 🎮",
 										"description": "Displays The List Of Game Features",
@@ -8989,55 +9007,66 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								]
 							},
 							{
-								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇🌷"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
-											"title": "Convert Menu 😶",
+											"title": "Convert Menu ⚒️",
 										"description": "Displays The List Of Convert Features",
 										"rowId": `${prefix}convertmenu`
 										}
 								]
 							},
 							{
-								"title": "✨•.:°❀×═════════×❀°:.•✨"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
-											"title": "Database Menu 😎",
+											"title": "Database Menu ♻️",
 										"description": "Displays The List Of Database Features",
 										"rowId": `${prefix}databasemenu`
 										}
 								]
 							},
 							{
-								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇🌷"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
-										"title": "Indo Menu  🤗",
+										"title": "Indo Menu  🦜",
 										"description": "Displays The List Of Indo Features",
 										"rowId": `${prefix}indomenu`
 									}
 								]
 							},
 							{
-								"title": "✨•.:°❀×═════════×❀°:.•✨"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
-											"title": "Horoscope Menu 🤪",
+											"title": "Horoscope Menu 🕊️",
 										"description": "Displays The List Of Horoscope Features",
 										"rowId": `${prefix}indohoroscopemenu`
 										}
 								]
 							},
 							{
-								"title": "🌷࿇ ══━━━━✥◈✥━━━━══ ࿇🌷"rows": [
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
+								"rows": [
 									{
-										"title": "Anonymous Chat Menu 🤭",
+										"title": "Anonymous Chat Menu 🙎🏻‍♂️",
 										"description": "Displays The List Of Anonymous Chat Features",
 										"rowId": `${prefix}anonymousmenu`
 									}
 								]
 							},
 							{
-								"title": "✨•.:°❀×═════════×❀°:.•✨",
+								"title": "🌷↷✦; w e l c o m e ❞
+🌷",
 								"rows": [
 									{
-										"title": "Thanks To 🤗",
+										"title": "Thanks To ❤️",
 										"description": "Displays The List Of Credit Of The Bot !!",
 										"rowId": `${prefix}tqtt`
 									}
@@ -10655,8 +10684,7 @@ case 'tqtt':
 	if (isBanChat) return reply(mess.banChat)
 reply(`Thanks to
 LORD BUDDHA
-Xeon
-Kianganz1
+Xeon (Me)
 My family
 And all friends who helped assemble this sexy script !!!`)
 break
