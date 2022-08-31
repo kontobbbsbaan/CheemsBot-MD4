@@ -1095,7 +1095,18 @@ const reactionMessage = {
 const latensie = speed() - timestampe
                 const menulist = `
 Hallo ${pushname} 👋\n
-「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」\nSpeed : ${latensie.toFixed(4)} miliseconds\nRuntime : ${runtime(process.uptime())}\nName Bot : ${global.botname}\nName\nOwner : ${global.ownername}\nNomer Owner : ${global.owner}\nHostname : ${os.hostname()}\nPlatform : ${os.platform()}\nUser Total : ${Object.keys(global.db.data.users).length}\nTotal Hit : ${jumlahcmd}\nTotal Hit Today : ${jumlahharian}\nGroub Bot : https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg\nMy Github : https://github.com/Kianganz1\nSubscribe : https://youtube.com/channel/UCkBZi04ShJK4PU4SDkp_flA\n`
+「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」
+Prefix : ( ${prefix} )
+Speed : ${latensie.toFixed(4)} miliseconds
+Runtime : ${runtime(process.uptime())}
+Name Bot : ${global.botname}
+Name Owner : ${global.ownername}
+Nomer Owner : ${global.owner}
+Hostname : MdzOfc
+Platform : Rdp
+User Total : ${Object.keys(global.db.data.users).length}
+Total Hit : ${jumlahcmd}
+Total Hit Today : ${jumlahharian}`
    
    //randoming function
 function pickRandom(list) {
@@ -8727,7 +8738,7 @@ case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case '
 if (isBanChat) return reply(mess.banChat)
 teks = `𝐃𝐎𝐍𝐀𝐒𝐈\n〽️𝘗𝘜𝘓𝘚𝘈:0838-4540-9710\n〽️𝘚𝘈𝘞𝘌𝘙𝘐𝘈:https://saweria.co/Kianganz\n〽️𝘔𝘠 𝘎𝘐𝘛𝘏𝘜𝘉:https://github.com/Kianganz1`
 let buttons = [
-{buttonId: `ping`, buttonText: {displayText: 'Ping'}, type: 1}
+{buttonId: `doge`, buttonText: {displayText: '🗿'}, type: 1}
 ]
 let buttonMessage = {
 image: thum,
@@ -8737,7 +8748,7 @@ footer: `${botname}`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
-title:"©𝞙𝐼𝜦𝑁 𝑀𝞚𝐾𝛴𝛤 😈",
+title:" 😉",
 body: "Please Donate", 
 thumbnail: fs.readFileSync("XeonMedia/theme/kian.jpg"),
 mediaType:1,
@@ -8781,14 +8792,11 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                         /////////XeonBotInc.send5ButMsg(m.chat, menulist, global.botname, btn)
                         } else if (setbot.templateDocument) {
                         let buttonmenu = [
-        	{ urlButton: { displayText: `YouTube `, url : `${websitex}` } },
-            { urlButton: { displayText: `Script `, url: `${botscript}` } },
             { quickReplyButton: { displayText: `All Menu `, id: 'allmenu'} },
             { quickReplyButton: { displayText: `List Menu `, id: 'command'} },
             { quickReplyButton: { displayText: `Owner `, id: 'owner'} }
         	]
-        	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), mimetype: `${docs}`, fileName: `࿇ ══━━━━✥${pushname}✥━━━━══ ࿇
-`, templateButtons: buttonmenu, footer: ``, mentionedJid: [m.sender] })
+        	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), mimetype: `${docs}`, fileName: `🌷══━━✥${pushname}✥━━══🌷`, templateButtons: buttonmenu, footer: ``, mentionedJid: [m.sender] })
                         }
                      }
             break
@@ -8806,127 +8814,137 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "😇 Whatsapp bots created by Kian 🤗",
 								"rows": [
 									{
-										"title": "☰ All Menu 📖",
+										"title": " All Menu 📖",
 										"description": "Displays The List Of All The Features",
 										"rowId": `${prefix}allmenu`
 									},
 									{
-										"title": "☰ Other 🌾",
+										"title": " Other 🌾",
 										"description": "Displays The List Of Other Features!",
 										"rowId": `${prefix}othermenu`
 									},
 									{
-										"title": "☰ Owner Menu 💠",
+										"title": " Owner Menu 💠",
 										"description": "Displays The List Of Owner Features",
 										"rowId": `${prefix}ownermenu`
 										},
 									{
-										"title": "☰ Group Menu ✨",
+										"title": " Group Menu ✨",
 										"description": "Displays The List Of Main Features",
 										"rowId": `${prefix}groupmenu`
 										},
 										{
-										"title": "☰ Maker Menu 🌈",
+										"title": " Maker Menu 🌈",
 										"description": "Displays The List Of Logo Making Features",
 										"rowId": `${prefix}indomenu`
 									},
 									{
-										"title": "☰ Sound Menu 🎵",
+										"title": " Sound Menu 🎵",
 										"description": "Displays The List Of Sound Features",
 										"rowId": `${prefix}soundmenu`
 									},
 									{
-										"title": "☰ Download Menu ↘️",
+										"title": " Download Menu ↘️",
 										"description": "Displays The List Of Download Features",
 										"rowId": `${prefix}downloadmenu`
 									},
 									{
-										"title": "☰ Sticker Menu 🃏",
+										"title": " Sticker Menu 🃏",
 										"description": "Displays The List Of Sticker Features",
 										"rowId": `${prefix}indomenu`
 									},
 									{
-										"title": "☰ Search Menu 🔎",
+										"title": " Search Menu 🔎",
 										"description": "Displays The List Of Searching Features",
 										"rowId": `${prefix}searchmenu`
 									},
 									{
-										"title": "☰ Tool Menu ⚙️",
+										"title": " Tool Menu ⚙️",
 										"description": "Displays The List Of Tool Features",
 										"rowId": `${prefix}toolmenu`
 									},
 									{
-										"title": "☰ Random Image Menu 🌆",
+										"title": " Random Image Menu 🌆",
 										"description": "Displays The List Of Random Image Features",
 										"rowId": `${prefix}randomimagemenu`
 									},
 									{
-										"title": "☰ Image Effect Menu 🖼️",
+										"title": " Image Effect Menu 🖼️",
 										"description": "Displays The List Of Image Effect Features",
 										"rowId": `${prefix}imageeffectmenu`
 									},
 										{
-											"title": "☰ Anime Menu 😘",
+											"title": " Anime Menu 😘",
 										"description": "Displays The List Of Random Anime Features",
 										"rowId": `${prefix}animemenu`
 										},
 										{
-											"title": "☰ Emote Menu 😀",
+											"title": " Emote Menu 😀",
 										"description": "Displays The List Of Emote Features",
 										"rowId": `${prefix}emotemenu`
 										},
 										{
-										"title": "☰ Anime Sticker Menu ☺️",
+										"title": " Anime Sticker Menu ☺️",
 										"description": "Displays The List Of Anime Sticker Features",
 										"rowId": `${prefix}animestickermenu`
 									     },
 									{
-										"title": "☰ Nsfw Menu 🔞",
+										"title": " Nsfw Menu 🔞",
 										"description": " please repent you and don't see anything that smells 18+",
 										"rowId": `${prefix}nsfwmenu`
 									     },
 										{
-											"title": "☰ Fun Menu 🕺",
+											"title": " Fun Menu 🕺",
 										"description": "Displays The List Of Fun Features",
 										"rowId": `${prefix}funmenu`
 										},
 										{
-										"title": "☰ Game Menu 🎮",
+										"title": " Game Menu 🎮",
 										"description": "Displays The List Of Game Features",
 										"rowId": `${prefix}indomenu`
 									},
 										{
-											"title": "☰ Convert Menu ⚒️",
+											"title": " Convert Menu ⚒️",
 										"description": "Displays The List Of Convert Features",
 										"rowId": `${prefix}convertmenu`
 										},
 										{
-											"title": "☰ Database Menu ♻️",
+											"title": " Database Menu ♻️",
 										"description": "Displays The List Of Database Features",
 										"rowId": `${prefix}databasemenu`
 										},
 										{
-										"title": "☰ Indo Menu  🦜",
+										"title": " Indo Menu  🦜",
 										"description": "Displays The List Of Indo Features",
 										"rowId": `${prefix}indomenu`
 									},
 										{
-											"title": "☰ Horoscope Menu 🕊️",
+											"title": " Horoscope Menu 🕊️",
 										"description": "Displays The List Of Horoscope Features",
 										"rowId": `${prefix}indohoroscopemenu`
 										},
 									{
-										"title": "☰ Anonymous Chat Menu 🙎🏻‍♂️",
+										"title": " Anonymous Chat Menu 🙎🏻‍♂️",
 										"description": "Displays The List Of Anonymous Chat Features",
 										"rowId": `${prefix}anonymousmenu`
+										},
+										{
+										"title": " Link Grub/Groub Bot 🦚",
+										"description": "\nhttps://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg",
+										"rowId": `${prefix}patrick`
+										},
+										{
+										"title": " Wa Owner 🤠",
+										"description": "\nhttp://wa.me/6283845409710",
+										"rowId": `${prefix}doge`
 									}
 								]
 							},
 							{
-								"title": "༺CREDIT AND THE ASSEMBLING BOT༻",
+								"title": "© Credit Bot",
 								"rows": [
 									{
-										"title": "☰ Thanks To 🙂",
+										"title": " Thanks To 🙂",
 										"description": "Displays The List Of Credit Of The Bot !!",
 										"rowId": `${prefix}tqtt`
 									}
