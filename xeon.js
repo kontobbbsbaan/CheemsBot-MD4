@@ -187,7 +187,7 @@ mimetype: docs,
 jpegThumbnail:XeonWlcm,
 mentions: [num],
 fileName: ` `,
-fileLength: 99999999999,
+fileLength: 9999999999999,
 caption: xeonbody,
 footer: ``,
 buttons: buttons,
@@ -197,8 +197,8 @@ title: `${metadata.subject}`,
 body: ` `,
 mediaType: 1,
 thumbnail: XeonWlcm,
-sourceUrl: `https://youtu.be/jvgezAeEJGo`,
-mediaUrl: `https://telegra.ph/file/111a61774f982431ea6d7.jpg`
+sourceUrl: `https://www.facebook.com/profile.php?id=100077747022268`,
+mediaUrl: `https://www.facebook.com/profile.php?id=100077747022268`
 }}
 }
 XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
@@ -210,7 +210,7 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
                     const xeonmembers = metadata.participants.length
                     let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: -99999999999999999999,status: 200, thumbnail: xeonbuffer, surface: 200, message: ` `, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                     xeonbody = `
-Goodbye @${xeonName.split("@")[0]}\nLeft to ${metadata.subject}\nMember ${xeonmembers}th\nTime ${xeontime}\nDate ${xeondate}\n`
+Goodbye @${xeonName.split("@")[0]}\nLeft from ${metadata.subject}\nMember ${xeonmembers}th\nTime ${xeontime}\nDate ${xeondate}\n`
       //if you copy the code value,
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
@@ -223,7 +223,7 @@ mimetype: docs,
 jpegThumbnail:XeonLft,
 mentions: [num],
 fileName: ` `,
-fileLength: 99999999999,
+fileLength: 9999999999999,
 caption: xeonbody,
 footer: ``,
 buttons: buttons,
@@ -233,8 +233,8 @@ title: `${metadata.subject}`,
 body: ` `,
 mediaType: 1,
 thumbnail: XeonLft,
-sourceUrl: `https://youtu.be/jvgezAeEJGo`,
-mediaUrl: `https://telegra.ph/file/111a61774f982431ea6d7.jpg`
+sourceUrl: `https://www.facebook.com/profile.php?id=100077747022268`,
+mediaUrl: `https://www.facebook.com/profile.php?id=100077747022268`
 }}
 }
 XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
