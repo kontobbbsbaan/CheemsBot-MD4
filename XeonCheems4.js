@@ -2376,11 +2376,10 @@ if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
-let teks = `╚»˙·٠•●♥ Tag All ♥●•٠·˙«╝ 
- 
- ➲ *Message : ${q ? q : 'no message'}*\n\n`
+let teks = ` TAG ALL\n
+*${q ? q : 'no message from admin'}*\n\n`
                 for (let mem of participants) {
-                teks += `${themeemoji} @${mem.id.split('@')[0]}\n`
+                teks += `@${mem.id.split('@')[0]}\n`
                 }
                 XeonBotInc.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
@@ -7937,19 +7936,18 @@ break
 	    case 'tiktok':{
   	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-  if (!q) return reply('Where is the link?')
+  if (!q) return reply('Link?')
   reply(mess.wait)
-  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+  if (!q.includes('tiktok')) return reply(` sorry tiktok feature is in error please don't use it`)
    const musim_rambutan = await XeonBotIncTiktok(`${q}`).catch(e => {
  reply(mess.error) 
 } )
    console.log(musim_rambutan)
    const xeontiktokop = musim_rambutan.result.watermark
-texttk = `Wanna download no watermark or audio?
-_Please choose the button below_`
+texttk = ` *sorry feature error* `
 let buttons = [
-{buttonId: `ttnowm ${q}`, buttonText: {displayText: 'No Watermark ❌'}, type: 1},
-{buttonId: `ttaud ${q}`, buttonText: {displayText: 'Audio 🎶'}, type: 1}
+{buttonId: `ttnowm ${q}`, buttonText: {displayText: '🚫 ERROR'}, type: 1},
+{buttonId: `ttaud ${q}`, buttonText: {displayText: '🚫 ERROR'}, type: 1}
 ]
 let buttonMessage = {
 video: {url:xeontiktokop},
@@ -8011,8 +8009,7 @@ let buttons = [
 ]
 let buttonMessage = {
 image: { url: anu.thumbnail },
-caption: `*| YOUTUBE PLAY |*
-
+caption: `
 ➢ Title : ${anu.title}
 ➢ Ext : Search
 ➢ ID : ${anu.videoId}
@@ -8044,8 +8041,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!args[0]) return reply(mess.linkm)
 try {
 hx.youtube(args[0]).then(async(res) => {
-textyt = `*| YOUTUBE DOWNLOADER |*
-
+textyt = `
 ➢ Title : ${res.title}
 ➢ Size : ${res.size}
 ➢ Quality : ${res.quality}
@@ -8124,8 +8120,6 @@ if (isBanChat) return reply(mess.banChat)
   xeonkey.Youtube(`${text}`).then(async (data) => {
   if (data.medias[0].formattedSize.split('MB')[0] >= 999) return reply('*File Over Limit* '+util.format(data)) 
   cap = `
-*YOUTUBE SHORTS*
-
 *${themeemoji}TITLE:* ${data.title}\n*${themeemoji}QUALITY:* ${data.medias[0].quality}\n*${themeemoji}SIZE:* ${data.medias[0].formattedSize}\n*${themeemoji}DURATION* ${data.duration}\n*${themeemoji}ID:* ${data.medias[0].cached}\n*${themeemoji}LINK:* ${data.url}\n\n*${botname}*`
   buf = await getBuffer(data.thumbnail)
   XeonBotInc.sendMessage(m.chat, { image: { url: data.thumbnail }, jpegThumbnail:buf, caption: `${cap}` }, { quoted: m })
@@ -8174,11 +8168,10 @@ if (!text) return reply(mess.linkm)
 if (!isUrl(args[0]) && !args[0].includes('mediafire.com')) return reply(`The link you provided is invalid`)
 const baby1 = await mediafireDl(text)
 if (baby1[0].size.split('MB')[0] >= 999) return reply('*File Over Limit* '+util.format(baby1))
-const result4 = `*MEDIAFIRE DOWNLOADER*
-				
+const result4 = `
 *Name* : ${baby1[0].nama}
 *Size* : ${baby1[0].size}
-*Mime* : ${baby1[0].mime}
+*Type File* : ${baby1[0].mime}
 *Link* : ${baby1[0].link}`
 reply(`${result4}`)
 XeonBotInc.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1[0].nama, mimetype: baby1[0].mime }, { quoted : m }).catch ((err) => reply(mess.error))
@@ -8794,7 +8787,8 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
             { quickReplyButton: { displayText: `List Menu `, id: 'command'} },
             { quickReplyButton: { displayText: `Owner `, id: 'owner'} }
         	]
-        	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), mimetype: `${docs}`, fileName: ` `, templateButtons: buttonmenu, footer: ``, mentionedJid: [m.sender] })
+        	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), mimetype: `${docs}`, fileName: `࿇ ══━━━━✥${pushname}✥━━━━══ ࿇
+`, templateButtons: buttonmenu, footer: ``, mentionedJid: [m.sender] })
                         }
                      }
             break
@@ -8805,268 +8799,134 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 listMessage :{
                     title: `Hallo ${pushname} 👋`,
                     description: `Please Choose The Menu`,
-                    buttonText: "CLICK HERE",
-                    footerText: `ᴛʜᴇ sɪᴍᴘʟᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ʙʏ ᴋɪᴀɴ`,
+                    buttonText: "CLICK HERE 📌",
+                    footerText: `©Kian | ModzBotz`,
                     listType: "SINGLE_SELECT",
                     sections: [{
-								"title": "😎•.:°❀×═════════×❀°:.•
-😎",
+								"title": "😇 Whatsapp bots created by Kian 🤗",
 								"rows": [
 									{
-										"title": "Other ☕",
-										"description": "Displays The List Of Other Features",
-										"rowId": `${prefix}othermenu`
-									}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
-									{
-										"title": "All Menu 🥀",
-										"description": "Displays The List Of All The Features!",
+										"title": "☰ All Menu 📖",
+										"description": "Displays The List Of All The Features",
 										"rowId": `${prefix}allmenu`
-									}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
+									},
 									{
-										"title": "Owner Menu 💠",
+										"title": "☰ Other 🌾",
+										"description": "Displays The List Of Other Features!",
+										"rowId": `${prefix}othermenu`
+									},
+									{
+										"title": "☰ Owner Menu 💠",
 										"description": "Displays The List Of Owner Features",
 										"rowId": `${prefix}ownermenu`
-										}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
+										},
 									{
-										"title": "Group Menu ✨",
+										"title": "☰ Group Menu ✨",
 										"description": "Displays The List Of Main Features",
 										"rowId": `${prefix}groupmenu`
-										}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
-									{
-										"title": "Maker Menu 🌈",
+										},
+										{
+										"title": "☰ Maker Menu 🌈",
 										"description": "Displays The List Of Logo Making Features",
 										"rowId": `${prefix}indomenu`
-									}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
+									},
 									{
-										"title": "Sound Menu 🎵",
+										"title": "☰ Sound Menu 🎵",
 										"description": "Displays The List Of Sound Features",
 										"rowId": `${prefix}soundmenu`
-									}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
+									},
 									{
-										"title": "Download Menu ↘️",
+										"title": "☰ Download Menu ↘️",
 										"description": "Displays The List Of Download Features",
 										"rowId": `${prefix}downloadmenu`
-									}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
+									},
 									{
-										"title": "Sticker Menu 🃏",
+										"title": "☰ Sticker Menu 🃏",
 										"description": "Displays The List Of Sticker Features",
 										"rowId": `${prefix}indomenu`
-									}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
+									},
 									{
-										"title": "Search Menu 🔎",
+										"title": "☰ Search Menu 🔎",
 										"description": "Displays The List Of Searching Features",
 										"rowId": `${prefix}searchmenu`
-									}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
+									},
 									{
-										"title": "Tool Menu ⚙️",
+										"title": "☰ Tool Menu ⚙️",
 										"description": "Displays The List Of Tool Features",
 										"rowId": `${prefix}toolmenu`
-									}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
+									},
 									{
-										"title": "Random Image Menu 🌆",
+										"title": "☰ Random Image Menu 🌆",
 										"description": "Displays The List Of Random Image Features",
 										"rowId": `${prefix}randomimagemenu`
-									}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
+									},
 									{
-										"title": "Image Effect Menu 🖼️",
+										"title": "☰ Image Effect Menu 🖼️",
 										"description": "Displays The List Of Image Effect Features",
 										"rowId": `${prefix}imageeffectmenu`
-									}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
-									{
-											"title": "Anime Menu 😘",
+									},
+										{
+											"title": "☰ Anime Menu 😘",
 										"description": "Displays The List Of Random Anime Features",
 										"rowId": `${prefix}animemenu`
-										}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
-									{
-											"title": "Emote Menu 😀",
+										},
+										{
+											"title": "☰ Emote Menu 😀",
 										"description": "Displays The List Of Emote Features",
 										"rowId": `${prefix}emotemenu`
-										}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
-									{
-										"title": "Anime Sticker Menu ☺️",
+										},
+										{
+										"title": "☰ Anime Sticker Menu ☺️",
 										"description": "Displays The List Of Anime Sticker Features",
 										"rowId": `${prefix}animestickermenu`
-									     }
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
+									     },
 									{
-										"title": "Nsfw Menu 🤓",
-										"description": "Displays The List Of Nsfe Features",
+										"title": "☰ Nsfw Menu 🔞",
+										"description": " please repent you and don't see anything that smells 18+",
 										"rowId": `${prefix}nsfwmenu`
-									     }
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
-									{
-											"title": "Fun Menu 🕺",
+									     },
+										{
+											"title": "☰ Fun Menu 🕺",
 										"description": "Displays The List Of Fun Features",
 										"rowId": `${prefix}funmenu`
-										}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
-									{
-										"title": "Game Menu 🎮",
+										},
+										{
+										"title": "☰ Game Menu 🎮",
 										"description": "Displays The List Of Game Features",
 										"rowId": `${prefix}indomenu`
-									}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
-									{
-											"title": "Convert Menu ⚒️",
+									},
+										{
+											"title": "☰ Convert Menu ⚒️",
 										"description": "Displays The List Of Convert Features",
 										"rowId": `${prefix}convertmenu`
-										}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
-									{
-											"title": "Database Menu ♻️",
+										},
+										{
+											"title": "☰ Database Menu ♻️",
 										"description": "Displays The List Of Database Features",
 										"rowId": `${prefix}databasemenu`
-										}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
-									{
-										"title": "Indo Menu  🦜",
+										},
+										{
+										"title": "☰ Indo Menu  🦜",
 										"description": "Displays The List Of Indo Features",
 										"rowId": `${prefix}indomenu`
-									}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
-									{
-											"title": "Horoscope Menu 🕊️",
+									},
+										{
+											"title": "☰ Horoscope Menu 🕊️",
 										"description": "Displays The List Of Horoscope Features",
 										"rowId": `${prefix}indohoroscopemenu`
-										}
-								]
-							},
-							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
-								"rows": [
+										},
 									{
-										"title": "Anonymous Chat Menu 🙎🏻‍♂️",
+										"title": "☰ Anonymous Chat Menu 🙎🏻‍♂️",
 										"description": "Displays The List Of Anonymous Chat Features",
 										"rowId": `${prefix}anonymousmenu`
 									}
 								]
 							},
 							{
-								"title": "🌷↷✦; w e l c o m e ❞
-🌷",
+								"title": "༺CREDIT AND THE ASSEMBLING BOT༻",
 								"rows": [
 									{
-										"title": "Thanks To ❤️",
+										"title": "☰ Thanks To 🙂",
 										"description": "Displays The List Of Credit Of The Bot !!",
 										"rowId": `${prefix}tqtt`
 									}
@@ -10682,11 +10542,7 @@ break
 case 'tqtt': 
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-reply(`Thanks to
-LORD BUDDHA
-Xeon (Me)
-My family
-And all friends who helped assemble this sexy script !!!`)
+reply(`THANKS TO 🌷\nLORD BUDDHA\nXeon\nKian\nModzBotOfc\nMy family\n This script has been recode and in remake by Kian!!!`)
 break
             default:
                 if (budy.startsWith('=>')) {
