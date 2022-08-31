@@ -8930,12 +8930,400 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										},
 										{
 										"title": " Link Grub/Groub Bot 🦚",
-										"description": "\nhttps://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg",
+										"description": "https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg",
 										"rowId": `${prefix}patrick`
 										},
 										{
 										"title": " Wa Owner 🤠",
-										"description": "\nhttp://wa.me/6283845409710",
+										"description": "http://wa.me/6283845409710",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
+										"rowId": `${prefix}doge`
+										},
+										{
+										"title": " ",
 										"rowId": `${prefix}doge`
 									}
 								]
@@ -8961,7 +9349,8 @@ case 'allmenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'All Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」	
+await XeonBotInc.send5ButImg(from, `
+╔═══════✪「 OWNER 」	
 ╠ ${prefix}self
 ╠ ${prefix}public
 ╠ ${prefix}antitag
