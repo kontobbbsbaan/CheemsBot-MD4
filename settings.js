@@ -65,11 +65,11 @@ global.owner = ['6283845409710']
 global.ownertag = '6283845409710' //ur tag number
 global.botname = 'MODZ BOTZ OFC' //ur bot name
 global.linkz = "https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg" //your theme url which will be displayed on whatsapp
-global.websitex = "https://github.com/Kianganz1" //ur website to be displayed
+global.websitex = "https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg" //ur website to be displayed
 global.botscript = 'https://github.com/DGXeon/CheemsBot-MD4' //script link
 global.reactmoji = "📚" //ur menu react emoji
 global.themeemoji = "🎭" //ur theme emoji
-global.packname = "By kian\ndi buat oleh bot wa\nnomerbot 085736056578" //ur sticker watermark packname
+global.packname = "By MODZ BOTZ" //ur sticker watermark packname
 global.author = "" //ur sticker watermark author
 
 //Bot theme media
