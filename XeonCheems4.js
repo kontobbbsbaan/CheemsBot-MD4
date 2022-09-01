@@ -472,11 +472,11 @@ message: {
 	
 	//group target \\
 const reply = (teks) => {
-           XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": `${ownername}`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./XeonMedia/theme/kian.jpg`),"sourceUrl": `${linkz}`}}}, { quoted: m})
+           XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": `${ownername}`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./XeonMedia/theme/robot1.jpg`),"sourceUrl": `${linkz}`}}}, { quoted: m})
         }
         
         const replay = (teks) => {
-            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": `${ownername}`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./XeonMedia/theme/kian.jpg`),"sourceUrl": `${linkz}`}}}, { quoted: m})
+            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": `${ownername}`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./XeonMedia/theme/robot1.jpg`),"sourceUrl": `${linkz}`}}}, { quoted: m})
         }
 	
         //Public & Self\\
@@ -3263,7 +3263,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
                 if (!/video/.test(mime) && !/image/.test(mime) && !/audio/.test(mime)) return reply(`*Send/Reply Video/Audio/Image You Want to Broadcast With Caption* ${prefix + command}`)
                 let anu = await store.chats.all().map(v => v.id)
-                let ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 999999999,status: 200, thumbnail: fs.readFileSync('./XeonMedia/theme/kian.jpg'), surface: 200, message: `${ownername}'s Broadcast`, orderTitle: `${botname}`, sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+                let ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 999999999,status: 200, thumbnail: fs.readFileSync('./XeonMedia/theme/robot1.jpg'), surface: 200, message: `${ownername}'s Broadcast`, orderTitle: `${botname}`, sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                 reply(`*Send Broadcast To* ${anu.length} *Group Chat, Time ${anu.length * 1.5} secs*`)
                 for (let i of anu) {
                     await sleep(1500)
@@ -8691,7 +8691,7 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
 case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-teks = `DONATE\n〽️𝘗𝘜𝘓𝘚𝘈:0838-4540-9710\n〽️𝘚𝘈𝘞𝘌𝘙𝘐𝘈:https://saweria.co/Kianganz\n〽️𝘔𝘠 𝘎𝘐𝘛𝘏𝘜𝘉:https://github.com/Kianganz1\n\n 𝗝𝗔𝗦𝗔 𝗦𝗘𝗪𝗔 𝗕𝗢𝗧 𝗠𝗨𝗥𝗔𝗛\n• -5k/10 hari/n• -10k/30hari+bisa masukin bot ke 2grub\n`
+teks = `DONATE\n〽️𝘗𝘜𝘓𝘚𝘈:0838-4540-9710\n〽️𝘚𝘈𝘞𝘌𝘙𝘐𝘈:https://saweria.co/Kianganz\n〽️𝘔𝘠 𝘎𝘐𝘛𝘏𝘜𝘉:https://github.com/Kianganz1\n\n 𝗝𝗔𝗦𝗔 𝗦𝗘𝗪𝗔 𝗕𝗢𝗧 𝗠𝗨𝗥𝗔𝗛\n• -5k/10 hari\n• -10k/30hari+bisa masukin bot ke 2grub\n`
 let buttons = [
 {buttonId: `doge`, buttonText: {displayText: '🗿'}, type: 1}
 ]
@@ -8705,7 +8705,7 @@ headerType: 4,
 contextInfo:{externalAdReply:{
 title:" 💰 Donate for bots",
 body: "Please Donate", 
-thumbnail: fs.readFileSync("XeonMedia/theme/kian.jpg"),
+thumbnail: fs.readFileSync("XeonMedia/theme/robot1.jpg"),
 mediaType:1,
 mediaUrl: 'https://saweria.co/Kianganz',
 sourceUrl: "https://saweria.co/Kianganz"
@@ -8922,8 +8922,6 @@ case 'allmenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'All Menu')
 await XeonBotInc.send5ButImg(from, `
-
-
  𝗢𝗪𝗡𝗘𝗥
 • ${prefix}self
 • ${prefix}public
