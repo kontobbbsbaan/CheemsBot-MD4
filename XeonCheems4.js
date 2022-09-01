@@ -8691,7 +8691,7 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
 case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-teks = `DONATE\n〽️𝘗𝘜𝘓𝘚𝘈:0838-4540-9710\n〽️𝘚𝘈𝘞𝘌𝘙𝘐𝘈:https://saweria.co/Kianganz\n〽️𝘔𝘠 𝘎𝘐𝘛𝘏𝘜𝘉:https://github.com/Kianganz1`
+teks = `DONATE\n〽️𝘗𝘜𝘓𝘚𝘈:0838-4540-9710\n〽️𝘚𝘈𝘞𝘌𝘙𝘐𝘈:https://saweria.co/Kianganz\n〽️𝘔𝘠 𝘎𝘐𝘛𝘏𝘜𝘉:https://github.com/Kianganz1\n\n 𝗝𝗔𝗦𝗔 𝗦𝗘𝗪𝗔 𝗕𝗢𝗧 𝗠𝗨𝗥𝗔𝗛\n• -5k/10 hari/n• -10k/30hari+bisa masukin bot ke 2grub\n`
 let buttons = [
 {buttonId: `doge`, buttonText: {displayText: '🗿'}, type: 1}
 ]
@@ -8722,10 +8722,15 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                                 urlButton: {
                                     displayText: 'Grub Bot 🤖',
                                     url: `${websitex}`
+                                    }
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'All Menu 📖',
+                                    id: 'allmenu'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'List Menu 📖',
+                                    displayText: 'List Menu 📚',
                                     id: 'command'
                                 }  
                             }, {
@@ -8747,9 +8752,9 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                         /////////XeonBotInc.send5ButMsg(m.chat, menulist, global.botname, btn)
                         } else if (setbot.templateDocument) {
                         let buttonmenu = [
-            { quickReplyButton: { displayText: `All Menu `, id: 'allmenu'} },
-            { quickReplyButton: { displayText: `List Menu `, id: 'command'} },
-            { quickReplyButton: { displayText: `Owner `, id: 'owner'} }
+            { quickReplyButton: { displayText: `All Menu 📖`, id: 'allmenu'} },
+            { quickReplyButton: { displayText: `List Menu 📚`, id: 'command'} },
+            { quickReplyButton: { displayText: `Owner 👤`, id: 'owner'} }
         	]
         	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), mimetype: `${docs}`, fileName: `🌷━━✥${pushname}✥━━🌷`, templateButtons: buttonmenu, footer: ``, mentionedJid: [m.sender] })
                         }
@@ -8917,6 +8922,8 @@ case 'allmenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'All Menu')
 await XeonBotInc.send5ButImg(from, `
+
+
  𝗢𝗪𝗡𝗘𝗥
 • ${prefix}self
 • ${prefix}public
