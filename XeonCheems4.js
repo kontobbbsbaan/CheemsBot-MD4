@@ -303,7 +303,7 @@ if (!('templateVideo' in setting)) setting.templateVideo = false
 	    } else global.db.data.settings[botNumber] = {
 		status: 0,
 		autobio: false,
-		templateImage: false,
+		templateImage: true,
 		templateVideo: false,
 		templateGif: false,
 		templateMsg: false,
@@ -476,7 +476,7 @@ const reply = (teks) => {
         }
         
         const replay = (teks) => {
-            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": `${ownername}`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./XeonMedia/theme/robot1.jpg`),"sourceUrl": `${linkz}`}}}, { quoted: m})
+            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": `${ownername}`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./XeonMedia/theme/robot2.jpg`),"sourceUrl": `${linkz}`}}}, { quoted: m})
         }
 	
         //Public & Self\\
@@ -3512,7 +3512,6 @@ let { TelegraPh } = require('./lib/uploader')
 if (!text) return reply(`Send/Reply Photo With Caption ${prefix + command} *text*`)
 if (text.includes('|')) return reply(`Send/Reply Photo With Caption ${prefix + command} *text*`)
 if (!/image/.test(mime)) return reply(`Send/Reply Photo With Caption ${prefix + command} *text*`)
-reply(mess.wait)
 mee = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
 mem = await TelegraPh(mee)
 meme = `https://api.memegen.link/images/custom/-/${text}.png?background=${mem}`
@@ -8705,7 +8704,7 @@ headerType: 4,
 contextInfo:{externalAdReply:{
 title:" 💰 Donate for bots",
 body: "Please Donate", 
-thumbnail: fs.readFileSync("XeonMedia/theme/robot1.jpg"),
+thumbnail: fs.readFileSync("XeonMedia/theme/robot5.jpg"),
 mediaType:1,
 mediaUrl: 'https://saweria.co/Kianganz',
 sourceUrl: "https://saweria.co/Kianganz"
