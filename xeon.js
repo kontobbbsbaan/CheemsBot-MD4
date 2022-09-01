@@ -174,7 +174,7 @@ XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeUR
 	            const xmembers = metadata.participants.length
                 let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: -99999999999999999999,status: 200, thumbnail: XeonWlcm, surface: 200, message: ` `, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                 xeonbody = `
-Hallo @${xeonName.split("@")[0]}\nWelcome To ${metadata.subject}\nMember ${xmembers}th\Time ${xtime}\nDate ${xdate}`
+Hallo @${xeonName.split("@")[0]}\nWelcome To ${metadata.subject}\nMember ${xmembers}th\nTime ${xtime}\nDate ${xdate}`
       //if you copy the code value,
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
@@ -187,7 +187,7 @@ mimetype: docs,
 jpegThumbnail:XeonWlcm,
 mentions: [num],
 fileName: ` `,
-fileLength: 9999999999999,
+fileLength: 999999999999999,
 caption: xeonbody,
 footer: ``,
 buttons: buttons,
@@ -223,7 +223,7 @@ mimetype: docs,
 jpegThumbnail:XeonLft,
 mentions: [num],
 fileName: ` `,
-fileLength: 9999999999999,
+fileLength: 999999999999999,
 caption: xeonbody,
 footer: ``,
 buttons: buttons,
