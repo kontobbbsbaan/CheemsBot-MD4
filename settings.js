@@ -73,10 +73,10 @@ global.packname = "By MODZ BOTZ" //ur sticker watermark packname
 global.author = "" //ur sticker watermark author
 
 //Bot theme media
-global.thum = fs.readFileSync("./XeonMedia/theme/kian.jpg") //ur thumb pic
-global.log0 = fs.readFileSync("./XeonMedia/theme/kian.jpg") //ur logo pic
-global.err4r = fs.readFileSync("./XeonMedia/theme/kian.jpg") //ur error pic
-global.thumb = fs.readFileSync("./XeonMedia/theme/kian.jpg") //ur thumb pic
+global.thum = fs.readFileSync("./XeonMedia/theme/robot1.jpg") //ur thumb pic
+global.log0 = fs.readFileSync("./XeonMedia/theme/robot2.jpg") //ur logo pic
+global.err4r = fs.readFileSync("./XeonMedia/theme/robot3.jpg") //ur error pic
+global.thumb = fs.readFileSync("./XeonMedia/theme/robot4.jpg") //ur thumb pic
 
 //damtabase
 global.premium = ['6283845409710'] //ur premium numbers
@@ -133,7 +133,7 @@ global.mess = {
    umpanawal: 5,
    potionawal: 1
 }
-global.thumb = fs.readFileSync('./XeonMedia/theme/kian.jpg')
+global.thumb = fs.readFileSync('./XeonMedia/theme/robot5.jpg')
 global.flaming = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
 global.fluming = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=fluffy-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
 global.flarun = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=runner-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
