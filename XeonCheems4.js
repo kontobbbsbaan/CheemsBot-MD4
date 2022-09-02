@@ -99,96 +99,6 @@ const {
   Couples,
   Darkjokes
 } = require("dhn-api")
-//rpg function\\
-   const { 
-     addInventoriDarah, 
-      cekDuluJoinAdaApaKagaDiJson, 
-      addDarah, 
-      kurangDarah, 
-     getDarah 
-   }  = require('./storage/user/darah.js')
-   const { 
-     cekInventoryAdaAtauGak, 
-      addInventori,  
-       addBesi, 
-       addEmas, 
-       addEmerald,
-       addUmpan,
-       addPotion,
-       kurangBesi, 
-       kurangEmas, 
-       kurangEmerald, 
-       kurangUmpan,
-       kurangPotion,
-       getBesi, 
-      getEmas, 
-     getEmerald,
-     getUmpan,
-    getPotion
-   } = require('./storage/user/alat_tukar.js')
-   const { 
-    addInventoriMonay, 
-    cekDuluJoinAdaApaKagaMonaynyaDiJson, 
-    addMonay, 
-    kurangMonay, 
-   getMonay 
-   } = require('./storage/user/monay.js')
-   const { 
-    addInventoriLimit, 
-    cekDuluJoinAdaApaKagaLimitnyaDiJson, 
-    addLimit, 
-    kurangLimit, 
-    getLimit 
-   } = require('./storage/user/limit.js')
-   const { 
-    cekDuluHasilBuruanNya, 
-     addInventoriBuruan, 
-     addIkan,
-      addAyam, 
-      addKelinci, 
-      addDomba, 
-      addSapi,
-      addGajah,
-      kurangIkan,
-      kurangAyam, 
-      kurangKelinci, 
-      kurangDomba, 
-      kurangSapi,
-      kurangGajah,
-      getIkan,
-      getAyam, 
-      getKelinci, 
-      getDomba,
-     getSapi,
-    getGajah
-   } = require('./storage/user/buruan.js')
-   let DarahAwal =  global.rpg.darahawal
-   const isDarah = cekDuluJoinAdaApaKagaDiJson(m.sender)   
-   const isCekDarah = getDarah(m.sender)
-   const isUmpan = getUmpan(m.sender)
-   const isPotion = getPotion(m.sender)
-   const isIkan = getIkan(m.sender)
-   const isAyam = getAyam(m.sender)
-   const isKelinci = getKelinci(m.sender)
-   const isDomba = getDomba(m.sender)
-   const isSapi = getSapi(m.sender)
-   const isGajah = getGajah(m.sender)
-   const isMonay = getMonay(m.sender)
-   const isLimit = getLimit(m.sender)
-   const isBesi = getBesi(m.sender)
-   const isEmas = getEmas(m.sender)
-   const isEmerald = getEmerald(m.sender)
-   const isInventory = cekInventoryAdaAtauGak(m.sender)
-   const isInventoriBuruan = cekDuluHasilBuruanNya(m.sender)
-   const isInventoryLimit = cekDuluJoinAdaApaKagaLimitnyaDiJson(m.sender)
-   const isInventoryMonay = cekDuluJoinAdaApaKagaMonaynyaDiJson(m.sender)
-   const ikan = ['🐟','🐠','🐡']   
-
-//rpg database\\
- let _limit = JSON.parse(fs.readFileSync('./storage/user/limit.json'));
- let _buruan = JSON.parse(fs.readFileSync('./storage/user/hasil_buruan.json'));
- let _darahOrg = JSON.parse(fs.readFileSync('./storage/user/darah.json'))
-
 //Database omther\\
 let xeonysticker = JSON.parse(fs.readFileSync('./XeonMedia/theme/Media-Store-Karne-Ke-Liye/sticker.json'));
 let xeonyaudio = JSON.parse(fs.readFileSync('./XeonMedia/theme/Media-Store-Karne-Ke-Liye/audio.json'));
@@ -1202,339 +1112,6 @@ replay("Error")
 }
 }
 break
-	
-        case 'inventori': case 'inventory': case 'profile':{
-        	if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (q.includes('--help')) return reply(examkosong) 
-  if (!isDarah){ addInventoriDarah(m.sender, DarahAwal) }
-  if (!isInventory){ addInventori(m.sender) }
-  if (!isInventoriBuruan){ addInventoriBuruan(m.sender) }
-     
-     var XeonBotInc = await getBuffer(picak+`User's Inventory`)
-     let teksehmazeh = `_[ 👩🏻‍💼INFO USER👨🏻‍💼 ]_\n\n`
-     teksehmazeh += `*❤️Your Blood* : ${getDarah(m.sender)}\n`
-     teksehmazeh += `*◻️️Your Iron* : ${getBesi(m.sender)}\n`
-     teksehmazeh += `*🌟Your Gold* : ${getEmas(m.sender)}\n`
-     teksehmazeh += `*💎Your Emerald* : ${getEmerald(m.sender)}\n`
-     teksehmazeh += `*⏺️Your Limit* : ${getLimit(m.sender)}\n`
-     teksehmazeh += `*🧪Your Potion* : ${getPotion(m.sender)}\n\n`
-     teksehmazeh += `_[ 🐺HUNT RESULT🐺 ]_\n`
-     teksehmazeh += `*🐟Fish* : ${getIkan(m.sender)}\n`
-     teksehmazeh += `*🐔Chicken* : ${getAyam(m.sender)}\n`
-     teksehmazeh += `*🐇Rabbit* : ${getKelinci(m.sender)}\n`
-     teksehmazeh += `*🐑Sheep* : ${getDomba(m.sender)}\n`
-     teksehmazeh += `*🐄Cow* : ${getSapi(m.sender)}\n`
-     teksehmazeh += `*🐘Elephant* : ${getGajah(m.sender)}\n\n`
-     teksehmazeh += `_*${pushname}*_`
-     await XeonBotInc.send5ButImg(from, `` + '' + teksehmazeh, `© ${botname}`, XeonBotInc, [{"urlButton": {"displayText": "YouTube","url": `${websitex}`}}])
-  }
-  break
-        case 'userlimit': 
-        if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-{      
-   let txt = ` *ALL LIMIT USER* \n\n`
-     for (let i of _limit){
-     txt += `➸ *ID :* @${i.id.split("@")[0]}\n➸ *Limit* : ${i.limit}\n`
-     }
-    reply(txt)       
-  }
- break
- case 'leaderboard':
- if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-{      
-   let txt = ` *LEADERBOARD* \n\n`
-     for (let i of _buruan){
-     txt += `➸ *ID :* ${i.id}\n`
-     txt += `*🐟Fish* : ${i.ikan}\n`
-     txt += `*🐔Chicken* : ${i.ayam}\n`
-     txt += `*🐇Rabbit* : ${i.kelinci}\n`
-     txt += `*🐑Sheep* : ${i.domba}\n`
-     txt += `*🐄Cow* : ${i.sapi}\n`
-     txt += `*🐘Elephant* : ${i.gajah}\n\n`
-     }
-    reply(txt)       
-  }
- break
-case 'mining': case 'mine':{
-	if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (q.includes('--help')) return reply(examkosong) 
-  if (!isInventory){ addInventori(m.sender) }
-  if (isCekDarah < 1) return reply(`You're Tired!, Try To Heal Using Potions`) 
-  let besi = [1,2,5,0,3,0,1,1,4,1,5,0,0]
-  let emas = [0,1,2,3,0,0,0,1,1,0,0,2]
-  let emerald = [0,0,1,0,0,1,0,2,1,0,0,1]
-  var besinya = besi[Math.floor(Math.random() * besi.length)]  
-  var emasnya = emas[Math.floor(Math.random() * emas.length)]  
-  var emeraldnya = emerald[Math.floor(Math.random() * emerald.length)]  
-  setTimeout( () => {
-  let caption = `[ MINING RESULT ]\n*Iron* : ${besinya}\n*Gold* : ${emasnya}\n*Emerald* : ${emeraldnya}`
-  let buttons = [
-      {
-       buttonId: `${prefix + command}`, 
-       buttonText: {
-        displayText: 'Mine Again⛏️'
-      }, type: 1},
-    ]
-    let buttonMessage = {
-      image: { url: './storage/image/tambang.jpg' },
-      caption: caption,
-      footer: pushname,
-      buttons: buttons,
-      headerType: 4
-     }
-     XeonBotInc.sendMessage(from, buttonMessage, { quoted: m })
-   
-   }, 7000)  
-  setTimeout( () => {
-  reply(`@${m.sender.split("@")[0]} Started Mining🎣`)     
-  }, 1500)
-  kurangDarah(m.sender, 10)
-  addBesi(m.sender, besinya)
-  addEmas(m.sended, emasnya)
-  addEmerald(m.sender, emeraldnya)	     
-  }   
-  break  
-  //transaction\\
- case 'beli': case 'buy':{
- 	if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (q.includes('--help')) return reply(examkosong) 
- if (!isInventoriBuruan){ addInventoriBuruan(m.sender) } 
- if (!isInventoryMonay){ addInventoriMonay(m.sender) }
- if (!isInventory){ addInventori(m.sender) }
- if (!q) return reply(`What Do You Want To Buy?\n\n1.potion\n2.baitfood\n3.limit\n\nExample: ${prefix + command} baitfood`)
- var anu = args[1]
-  if (args[0] === 'potion'){
-  let noh = 100000 * anu
- if (!args[1]) return reply(`Example : ${prefix + command} potion 2\n 1 Potion = 100000 Money`)
- if (isMonay < noh) return reply('Your Remaining Money Is Not Sufficient For This Purchase')
- kurangMonay(m.sender, noh)
- var apalu = anu * 1
- addPotion(m.sender, apalu)
-  setTimeout( () => {
-  reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Potion* : ${getPotion(m.sender)}`)
-  }, 2000) 
- } else 
- if (args[0] === 'baitfood'){
-  let noh = 5000 * anu
- if (!args[1]) return reply(`Example : ${prefix + command} baitfood 2\n 1 Bait Food = 2500 Money`)
- if (isMonay < noh) return reply('Your Remaining Money Is Not Sufficient For This Purchase')
- kurangMonay(m.sender, noh)
- var apalu = anu * 1
- addUmpan(m.sender, apalu)
-  setTimeout( () => {
-  reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Bait Food* : ${getUmpan(m.sender)}`)
-  }, 2000) 
-  } else 
-  if (args[0] === 'limit'){
-  let noh = 35000 * anu
- if (!args[1]) return reply(`Example : ${prefix + command} limit 2\n 1 Limit = 35000 Money`)
- if (isMonay < noh) return reply('Your Remaining Money Is Not Sufficient For This Purchase')
- kurangMonay(m.sender, noh)
- var apalu = anu * 1
- addLimit(m.sender, apalu)
-  setTimeout( () => {
-  reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Limit* : ${getLimit(m.sender)}`)
-  }, 2000) 
-  } else { reply("Incorrect Format!") }
- }
- break
- case 'sel': case 'jual':{
- 	 if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
- if (!q) return  reply(`What Do You Want To Sell??\nExample : ${prefix + command} fish 2`)
- if (!isInventoriBuruan){ addInventoriBuruan(m.sender) } 
- if (!isInventoryMonay){ addInventoriMonay(m.sender) }
- if (!isInventory){ addInventori(m.sender) }
- var anu = args[1]
- if (args[0] === 'fish'){
- if (isIkan < anu) return reply(`You Don't Have Enough Fish(es) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} fish 2\n 1 Fish = 1500 Money`)
- kurangIkan(m.sender, anu)
- let monaynya = 1500 * anu
- addMonay(m.sender, monaynya)
-  setTimeout( () => {
-  reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Fish(es)* : ${getIkan(m.sender)}`)
-  }, 2000) 
- } else
- if (args[0] === 'chicken'){
- if (isAyam < anu) return reply(`You Don't Have Enough Chicken(s) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} chicken 2\n 1 Chicken = 2500 Money`)
- kurangAyam(m.sender, anu)
- let monaynya = 2500 * anu
- addMonay(m.sender, monaynya)
-  setTimeout( () => {
-  reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Chicken* : ${getAyam(m.sender)}`)
-  }, 2000) 
- } else
- if (args[0] === 'rabbit'){
- if (isKelinci < anu) return reply(`You Don't Have Enough Rabbit(s) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} rabbit 2\n 1 Rabbit = 3000 Money`)
- kurangKelinci(m.sender, anu)
- let monaynya = 3000 * anu
- addMonay(m.sender, monaynya)
-  setTimeout( () => {
-  reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Rabbit(s)* : ${getKelinci(m.sender)}`)
-  }, 2000) 
- } else
- if (args[0] === 'sheep'){
- if (isDomba < anu) return reply(`You Don't Have Enough Sheep(s) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} domba 2\n 1 Sheep = 5000 money`)
- kurangDomba(m.sender, anu)
- let monaynya = 5000 * anu
- addMonay(m.sender, monaynya)
-  setTimeout( () => {
-  reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Sheep(s)* : ${getDomba(m.sender)}`)
-  }, 2000) 
- } else
- if (args[0] === 'cow'){
- if (isSapi < anu) return reply(`You Don't Have Enough Cow(s) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} cow 2\n 1 Cow = 10000 Money`)
- kurangSapi(m.sender, anu)
- let monaynya = 10000 * anu
- addMonay(m.sender, monaynya)
-  setTimeout( () => {
-  reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Cow(s)* : ${getSapi(m.sender)}`)
-  }, 2000) 
- } else
- if (args[0] === 'elephant'){
- if (isGajah < anu) return reply(`You Don't Have Enough Elephant(s) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} elephant 2\n 1 Elephant = 15000 Money`)
- kurangGajah(m.sender, anu)
- let monaynya = 15000 * anu
- addMonay(m.sender, monaynya)
-  setTimeout( () => {
-  reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Elephant(s)* : ${getGajah(m.sender)}`)
-  }, 2000) 
- } else
- if (args[0] === 'iron'){
- if (isBesi < anu) return reply(`You Don't Have Enough Iron(s) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} iron 2\n 1 Iron = 15000 Money`)
- kurangBesi(m.sender, anu)
- let monaynya = 16000 * anu
- addMonay(m.sender, monaynya)
-  setTimeout( () => {
-  reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*Your Remaining Iron(s)* : ${getBesi(m.sender)}`)
-  }, 2000) 
- } else
- if (args[0] === 'gold'){
- if (isEmas < anu) return reply(`You Don't Have Enough Gold(s) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} gold 2\n 1 Gold = 50000 Money`)
- kurangEmas(m.sender, anu)
- let monaynya = 50000 * anu
- addMonay(m.sender, monaynya)
-  setTimeout( () => {
-  reply(`Transaction Successful ✔️\n*Your Money* : ${getMonay(m.sender)}\n*Your Remaining Gold(s)* : ${getEmas(m.sender)}`)
-  }, 2000) 
- } else
- if (args[0] === 'emerald'){
- if (isEmerald < anu) return reply(`You Don't Have Enough Emerald(s) For This Transaction`)
- if (!args[1]) return reply(`Example : ${prefix + command} emerald 2\n 1 Emerald = 100000 Money`)
- kurangEmerald(m.sender, anu)
- let monaynya = 100000 * anu
- addMonay(m.sender, monaynya)
-  setTimeout( () => {
-  reply(`Transaction Successful ✔️\n*Your Remaining Money* : ${getMonay(m.sender)}\n*You Don't Have Enough Emerald(s) For This Transaction* : ${getEmerald(m.sender)}`)
-  }, 2000) 
- } else { reply("Incorrect Format!") }
-
- }
- break
-
- case 'heal':{
- 	if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (q.includes('--help')) return reply(examkosong) 
- if (!isCekDarah < 1) return reply('You Can Only Heal When Your Blood Is 0')
- if (isCekDarah > 100) return reply('Your Blood Is Full')
- if (isPotion < 1) return reply(`You Don't Have A Potion, Try Buying It This Way #buypotion _amount_`) 
- addDarah(m.sender, 100)
- kurangPotion(m.sender, 1)
- reply('Success! Your Bood Is Full')
- }
- break
- case 'hunt': case 'hunting': {
- 	if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (q.includes('--help')) return reply(examkosong) 
- if (!isDarah){ addInventoriDarah(m.sender, DarahAwal) }
- if (isCekDarah < 1) return reply('Your Blood Is Gone, Try To Heal Using Potions') 
- if (!isInventoriBuruan){ addInventoriBuruan(m.sender) } 
-  let luka = ["Pierced by a thorn while hunting","Slipped into the abyss while hunting","Scratched by a wild animal","Not careful","Entangled in roots","Fall while hunting"]
-  let location = ["Jungle","Amazon forest","Tropical forest","Meadow","African forest","Mountains"]
-   var ikanmu = Math.ceil(Math.random() * 10)
-   var ayam = Math.ceil(Math.random() * 8)
-   var kelinci = Math.ceil(Math.random() * 7)
-   var dombanya = [3,0,4,0,5,4,6,0,1,0,2,3,0,3,0,1]
-   var sapinya = [2,0,3,0,4,0,5,0,1,0,2,0,3,0,1]
-   var gajahnya = [1,0,4,0,2,0,1,0,2,1,3,0,1]
-   var domba = dombanya[Math.floor(Math.random() * dombanya.length)] 
-   var sapi = sapinya[Math.floor(Math.random() * sapinya.length)] 
-   var gajah = gajahnya[Math.floor(Math.random() * gajahnya.length)]    
-   var lukanya = luka[Math.floor(Math.random() * luka.length)]
-   var lokasinya = location[Math.floor(Math.random() * location.length)]
- if (lokasinya === 'Jungle') {
-    var image = './storage/image/rimba.jpg'
-   } else
- if (lokasinya === 'Amazon forest') {
-    var image =  './storage/image/amazon.jpg'
-   } else
- if (lokasinya === 'Tropical forest') {
-    var image = './storage/image/tropis.jpg'
-   } else
- if (lokasinya === 'Meadow') {
-    var image = './storage/image/padang_rumput.jpg'
-   } else
- if (lokasinya === 'African forest') {
-    var image = './storage/image/afrika.jpg'
-   } else
- if (lokasinya === 'Mountains') {
-   var image = './storage/image/pegunungan.jpg'
-   }
- setTimeout( () => {
-  let teksehmazeh = `_[ HUNT RESULT ]_\n`
-     teksehmazeh += `*🐟Fish* : ${ikanmu}\n`
-     teksehmazeh += `*🐔Chicken* : ${ayam}\n`
-     teksehmazeh += `*🐇Rabbit* : ${kelinci}\n`
-     teksehmazeh += `*🐑Sheep* : ${domba}\n`
-     teksehmazeh += `*🐄Cow* : ${sapi}\n`
-     teksehmazeh += `*🐘Elephant* : ${gajah}\n\n`
-     teksehmazeh += `_[ INFO ]_\n`
-     teksehmazeh += `*Location* : ${lokasinya}\n`
-     teksehmazeh += `*Wounded* : ${lukanya}, blood - 10\n`
-     teksehmazeh += `*Remaining blood* : ${getDarah(m.sender)}\n`
-    let buttons = [
-      {
-       buttonId: `${prefix + command}`, 
-       buttonText: {
-        displayText: 'Hunt Again️🏹'
-      }, type: 1},
-    ]
-    let buttonMessage = {
-      image: { url: image },
-      caption: teksehmazeh,
-      footer: pushname,
-      buttons: buttons,
-      headerType: 4
-     }
-     XeonBotInc.sendMessage(from, buttonMessage, { quoted: m })      
-  }, 5000)  
- setTimeout( () => {
-  reply(`@${m.sender.split("@")[0]} Started Hunting In ${lokasinya}`)     
-  }, 1000) 
- addIkan(m.sender, ikanmu) 
-   addAyam(m.sender, ayam) 
-   addKelinci(m.sender, kelinci)
-   addDomba(m.sender, domba)
-   addSapi(m.sender, sapi)
-  addGajah(m.sender, gajah)
- kurangDarah(m.sender, 10)
- }
- break
 case 'resetlinkgc':
 case 'resetlinkgroup':
 case 'resetlinkgrup':
@@ -5937,7 +5514,7 @@ break
 case 'emojimix': {
 	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!q) reply(`*Example :* ${prefix + command} 🦄+`)
+if (!q) reply(`*Example :* ${prefix + command} 😗+🙂`)
 let [emoji1, emoji2] = q.split`+`
 let kuntuh = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
 for (let res of kuntuh.results) {
@@ -6613,7 +6190,7 @@ break
 	if (isBanChat) return reply(mess.banChat)
 	reply(mess.wait)
             let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
-            if (!args[0]) reply(`Use${prefix}gitclone repo link\nExample: https://github.com/DGXeon/CheemsBot-MD4`)
+            if (!args[0]) reply(`Use${prefix}gitclone repo link\nExample: https://github.com/linkguthub/linkgithub`)
     if (!regex1.test(args[0])) return reply(mess.linkm)
     let [, user, repo] = args[0].match(regex1) || []
     repo = repo.replace(/.git$/, '')
@@ -8690,7 +8267,7 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
 case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-teks = `DONATE\n〽️𝘗𝘜𝘓𝘚𝘈:0838-4540-9710\n〽️𝘚𝘈𝘞𝘌𝘙𝘐𝘈:https://saweria.co/Kianganz\n〽️𝘔𝘠 𝘎𝘐𝘛𝘏𝘜𝘉:https://github.com/Kianganz1\n\n 𝗝𝗔𝗦𝗔 𝗦𝗘𝗪𝗔 𝗕𝗢𝗧 𝗠𝗨𝗥𝗔𝗛\n• -5k/10 hari\n• -10k/30hari+bisa masukin bot ke 2grub\n`
+teks = `DONATE\n〽️𝘗𝘜𝘓𝘚𝘈:0838-4540-9710\n〽️𝘚𝘈𝘞𝘌𝘙𝘐𝘈:https://saweria.co/Kianganz\n〽️𝘔𝘠 𝘎𝘐𝘛𝘏𝘜𝘉:https://github.com/Kianganz1\n\n 𝗝𝗔𝗦𝗔 𝗦𝗘𝗪𝗔 𝗕𝗢𝗧 𝗠𝗨𝗥𝗔𝗛\n• 5k/10 hari\n• 10k/30hari\n`
 let buttons = [
 {buttonId: `doge`, buttonText: {displayText: '🗿'}, type: 1}
 ]
@@ -8808,11 +8385,6 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"rowId": `${prefix}downloadmenu`
 									},
 									{
-										"title": " Rpg Game 🎮",
-										"description": "Displays The List Of Rpg Features",
-										"rowId": `${prefix}rpgmenu`
-									},
-									{
 										"title": " Search Menu 🔎",
 										"description": "Displays The List Of Searching Features",
 										"rowId": `${prefix}searchmenu`
@@ -8891,11 +8463,6 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"title": " Anonymous Chat Menu 🙎🏻‍♂️",
 										"description": "Displays The List Of Anonymous Chat Features",
 										"rowId": `${prefix}anonymousmenu`
-										},
-										{
-										"title": " Link Grub/Groub Bot 🦚",
-										"description": "https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg",
-										"rowId": `${prefix}patrick`
 									}
 								]
 							},
@@ -8944,7 +8511,7 @@ await XeonBotInc.send5ButImg(from, `
 • ${prefix}unblock [tag/number]
 • ${prefix}coowner [add/del]
 
-  𝗚𝗥𝗢𝗨𝗕
+  𝗚𝗥𝗢𝗨𝗣
 • ${prefix}groupsetting
 • ${prefix}grouplink
 • ${prefix}ephemeral [option]
@@ -9194,7 +8761,7 @@ await XeonBotInc.send5ButImg(from, `
 • ${prefix}animewall [query]
 • ${prefix}animewall2 [query]
 
- 𝗘𝗠𝗢𝗧 
+ 𝗘𝗠𝗢𝗧𝗘
 • ${prefix}instagramemoji
 • ${prefix}facebookemoji
 • ${prefix}iphoneemoji
@@ -9298,7 +8865,7 @@ await XeonBotInc.send5ButImg(from, `
 • ${prefix}neko
 • ${prefix}gura
 
- 𝗡𝗦𝗙𝗪 𝟭𝟴+
+ 𝗡𝗦𝗙𝗪
 • ${prefix}hentaivideo
 • ${prefix}yuri
 • ${prefix}masturbation
@@ -9736,25 +9303,6 @@ await XeonBotInc.send5ButImg(from, `
 • ${prefix}delvote
 ` + '' + ' ', ` `,unicorn, [{"urlButton": {"displayText": "Grub Bot 🤖 ","url": `${websitex}`}},{"quickReplyButton": {"displayText": "Donate 💰","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
-case 'rpgmenu':
-	   if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-var unicorn = await getBuffer(picak+'Rpg Menu')
-await XeonBotInc.send5ButImg(from, `
- 𝗥𝗣𝗚 𝗚𝗔𝗠𝗘
-• ${prefix}hunt
-• ${prefix}mine
-• ${prefix}fish
-• ${prefix}heal
-• ${prefix}blood
-• ${prefix}stab
-• ${prefix}buy
-• ${prefix}sell
-• ${prefix}profile
-• ${prefix}inventory
-• ${prefix}leaderboard
-` + '' + ' ', ` `,unicorn, [{"urlButton": {"displayText": "Grub Bot 🤖 ","url": `${websitex}`}},{"quickReplyButton": {"displayText": "Donate 💰","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
-break
 case 'makermenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
@@ -9987,7 +9535,6 @@ await XeonBotInc.send5ButImg(from, `
 • ${prefix}animewall2 [query]
 ` + '' + ' ', ` `,unicorn, [{"urlButton": {"displayText": "Grub Bot 🤖 ","url": `${websitex}`}},{"quickReplyButton": {"displayText": "Donate 💰","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
-
 case 'emotemenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
@@ -10142,7 +9689,7 @@ case 'nsfwmenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Nsfw Menu')
 await XeonBotInc.send5ButImg(from, `
- 𝗡𝗦𝗙𝗪 𝟭𝟴+
+ 𝗡𝗦𝗙𝗪
 • ${prefix}hentaivideo
 • ${prefix}yuri
 • ${prefix}masturbation
@@ -10247,7 +9794,7 @@ case 'soundmenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Sound Menu')
 await XeonBotInc.send5ButImg(from, ` 
-𝗦𝗢𝗨𝗡𝗗 𝟭-𝟭𝟲𝟭
+𝗦𝗢𝗨𝗡𝗗
 • ${prefix}sound1
 • ${prefix}sound2
 • ${prefix}sound3
