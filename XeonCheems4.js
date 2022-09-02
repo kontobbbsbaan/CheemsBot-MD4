@@ -1006,7 +1006,7 @@ const latensie = speed() - timestampe
                 const menulist = `
 Hallo ${pushname} 👋\n
  𝗜𝗡𝗙𝗢 𝗕𝗢𝗧
-Prefix : (${prefix} )
+Prefix : ( ${prefix} )
 Speed : ${latensie.toFixed(4)} miliseconds
 Runtime : ${runtime(process.uptime())}
 Name Bot : ${global.botname}
@@ -5787,91 +5787,6 @@ case 'ig2': case 'igdl2': case 'instagram2': {
             }).catch((err) => reply(mess.error))
             }		
 			break
-case 'igdl': case 'instagram': case 'instagramreels': case 'igreels': {
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (!args[0]) return reply(`Example :\n${prefix + command} https://www.instagram.com/p/CcvJGuxh9VI/?igshid=YmMyMTA2M2Y=`)
-try {
-hx.igdl(args[0]).then(async(resed) => {
-ini_anu = []
-anu_list = []
-textbv = `*| INSTAGRAM DOWNLOADER |*\n\n➢ Username : ${resed.user.username ? resed.user.name : "undefined"}\n➢ Followers : ${resed.user.followers}`
-urut = 1
-for (let i = 0; i < resed.medias.length; i++) {
-ini_anu.push({
- "type": resed.medias[i].fileType,
- "url": resed.medias[i].url
-})
-}
-ilod = 1
-for (let i of ini_anu) {
-anu_list.push({buttonId: `ig ${i.type} ${i.url}`, buttonText: {displayText: `Media ${ilod++}`}, type: 1})
-}
-textbv += `\n\n_Select the media below to download_`
-let buttons = anu_list
-let buttonMessage = {
-image:log0,
-jpegThumbnail:thum,
-caption: textbv,
-footer: `${global.botname}`,
-buttons: buttons,
-headerType: 4
-}
-XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
-})
-} catch (err) {
-reply(String(err))
-}
-}
-break
-case 'ig': {
-	   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (args[0] === "mp4") {
-XeonBotInc.sendMessage(from, {video:{url:args[1]}, caption:'Done!', mimetype:'video/mp4'}, {quoted:m})
-} else if (args[0] === "jpg") {
-XeonBotInc.sendMessage(from, {image:{url:args[1]}, caption:'Done!'}, {quoted:m})
-} else {
-reply("Error! ")
-}
-}
-break
-case 'mp4' : {
-	   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (!args[0]) return reply(`Where's the link ?`)
-try {
-XeonBotInc.sendMessage(from, {video:{url:args[0]}, caption:"Succes", contextInfo:{externalAdReply:{
-title:`${global.botname}`,
-body:`${global.ownername}`,
-thumbnail: log0,
-mediaType:2,
-mediaUrl: `${global.websitex}`,
-sourceUrl: `${global.websitex}`
-}}}, {quoted:m})
-} catch {
-reply("Link error!")
-}
-}
-break
-case 'jpeg': {
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (!args[0]) return reply(`Where's the link?`)
-try {
-XeonBotInc.sendMessage(from, {image:{url:args[0]}, caption:"Success", contextInfo:{externalAdReply:{
-title:`${global.botname}`,
-body:`${global.ownername}`,
-thumbnail: log0,
-mediaType:2,
-mediaUrl: `${global.websitex}`,
-sourceUrl: `${global.websitex}`
-}}}, {quoted:m})
-} catch {
-reply("Link error")
-}
-}
-break
 case 'igtv': {	            
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -5976,103 +5891,6 @@ headerType: 4,
 contextInfo:{externalAdReply:{
 title:`${global.botname}`,
 body: "Twitter Downloader",
-thumbnail: log0,
-mediaType:1,
-mediaUrl: args[0],
-sourceUrl: args[0]
-}}
-}
-XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
-}
-break
-case 'fbdl': case 'fb': case 'facebook': case 'fbmp4': {     	    
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-             if (!text) return reply(`Where is the link bro?\nExample:${prefix}facebook https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
-                if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`The link you provided is not valid`)
-            let bocil = require('@bochilteam/scraper')  
-                bocil.facebookdlv2(`${text}`).then(async (data) => {                   
-                    let txt = `*FB DOWNLOADER*\n\n`
-                    txt += `*${themeemoji}TITLE :* ${data.title}\n`
-                    txt += `*${themeemoji}QUALITY :* ${data.result[0].quality}\n`
-                    txt += `*${themeemoji}DESCRIPTION :* ${data.description}\n`
-                    txt += `*${themeemoji}ID :* ${watermark}\n`
-                    txt += `*${themeemoji}URL :* ${text}\n\n`
-                buf = await getBuffer(data.thumbnail)    
-                XeonBotInc.sendMessage(m.chat, { image: { url: data.thumbnail }, jpegThumbnail:buf, caption: `${txt}` }, { quoted: m })         
-                for (let i of data.result) {     
-                XeonBotInc.sendMessage(m.chat, { video: { url: i.url }, jpegThumbnail:buf, caption: `*${themeemoji} Quality :* ${i.quality}`}, { quoted: m })
-                }          
-                }).catch((err) => {
-                    reply(mess.error)
-                })
-            }
-            break
-            case 'fbmp3': case 'facebookmp3': case 'facebookaudio': {
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-                  if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
-                  if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`The link you provided is not valid`)
-  let noh = require('@bochilteam/scraper')                
-  noh.savefrom(`${text}`).then(async (anu) => {  
-  XeonBotInc.sendMessage(m.chat, { audio: { url: anu.url[0].url }, mimetype: 'audio/mp4' }, { quoted: m })      
-                }).catch((err) => {
-                    reply(mess.error)
-                })
-            }
-            break
-case 'facebookxx': case 'fbdlxxx': case 'fbmp4xxx': case 'fbxxx': {
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (!args[0]) return reply(`Example :\n${prefix + command} https://fb.watch/cAX2dep-BZ/`)
-try {
-let resd = await aiovideodl(args[0])
-teks = `*| FACEBOOK DOWNLOADER |*
-
-Type : video/${resd.medias[0].extension}
-Quality : ${resd.medias[0].quality}
-Size : ${resd.medias[0].formattedSize}
-
-_For HD quality you can click the button below_`
-let buttons = [
-{buttonId: `fbddl ${resd.medias[1].url}`, buttonText: {displayText: 'QualityHD'}, type: 1}
-]
-let buttonMessage = {
-video: {url:resd.medias[0].url},
-caption: teks,
-footer: `${pushname}`,
-buttons: buttons,
-headerType: 4,
-contextInfo:{externalAdReply:{
-title:`${global.botname}`,
-body:"Facebook Downloader",
-thumbnail: log0,
-mediaType:1,
-mediaUrl: args[0],
-sourceUrl: args[0]
-}}
-}
-XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
-} catch {
-reply("Link invalid!")
-}
-}
-break
-case 'fbddlxx': {
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-let buttons = [
-{buttonId: `menu`, buttonText: {displayText: 'Menu 🐥'}, type: 1}
-]
-let buttonMessage = {
-video: {url:args[0]},
-caption: "Done!",
-footer: `${pushname}`,
-buttons: buttons,
-headerType: 4,
-contextInfo:{externalAdReply:{
-title:`${global.botname}`,
-body: " Facebook Downloader",
 thumbnail: log0,
 mediaType:1,
 mediaUrl: args[0],
@@ -6534,17 +6352,6 @@ xeonkey.Film(q)
                XeonBotInc.sendMessage(from, { image: { url: data[0].thumb}, caption: krl }, { quoted: fdocs })
 });
 break
-case 'img':
-case 'image': {
-	if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-                reply(mess.wait)
-		let { pinterest } = require('./lib/scraperW')
-                anu = await pinterest(text)
-                result = anu[Math.floor(Math.random() * anu.length)]
-                XeonBotInc.sendMessage(m.chat, { image: { url: result }, caption: ` ${themeemoji} Media Url : `+result }, { quoted: m })
-            }
-            break
 case 'mcserver': case 'mcquery': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -7474,69 +7281,6 @@ break
                 if (anu.status == false) return reply(anu.message)
                 XeonBotInc.sendText(m.chat, `${themeemoji} *Results :* ${anu.message}`, m)
             }
-            break
-	    case 'tiktok':{
-  	if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-  if (!q) return reply('Link?')
-  reply(mess.wait)
-  if (!q.includes('tiktok')) return reply(` sorry tiktok feature is in error please don't use it`)
-   const musim_rambutan = await XeonBotIncTiktok(`${q}`).catch(e => {
- reply(mess.error) 
-} )
-   console.log(musim_rambutan)
-   const xeontiktokop = musim_rambutan.result.watermark
-texttk = ` *sorry feature error* `
-let buttons = [
-{buttonId: `ttnowm ${q}`, buttonText: {displayText: '🚫 ERROR'}, type: 1},
-{buttonId: `ttaud ${q}`, buttonText: {displayText: '🚫 ERROR'}, type: 1}
-]
-let buttonMessage = {
-video: {url:xeontiktokop},
-caption: texttk,
-footer: `${botname}`,
-buttons: buttons,
-headerType: 4,
-contextInfo:{externalAdReply:{
-title: `${ownername}`,
-body: `${pushname}`,
-thumbnail: log0,
-mediaType:1,
-mediaUrl: q,
-sourceUrl: q
-}}
-}
-XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
-}
-break
-  case 'tiktoknowm': case 'ttnowm':{
-  	if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-  if (!q) return reply('Where is the link?')
-  reply(mess.wait)
-  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-   const musim_rambutan = await XeonBotIncTiktok(`${q}`).catch(e => {
- reply(mess.error) 
-} )
-   console.log(musim_rambutan)
-   const xeonytiktoknowm = musim_rambutan.result.nowatermark
-    XeonBotInc.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: m })
-   }
-  break
-  case 'tiktokaudio':
-case 'tiktokmusic':
-case 'ttaud':{
-	if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-  if (!q) return reply('Where is the audio?')
-  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-   const musim_rambutan = await XeonBotIncTiktok(`${q}`).catch(e => {
- reply(mess.error) 
-} )
-   console.log(musim_rambutan)
-   const xeonytiktokaudio = musim_rambutan.result.nowatermark
-    XeonBotInc.sendMessage(from, { audio: { url: xeonytiktokaudio }, mimetype: 'audio/mp4' }, { quoted: m })
-   }
  break
 	case 'music': case 'play': case 'song': case 'ytplay': {
    if (isBan) return reply(mess.ban)	 			
@@ -7553,8 +7297,6 @@ let buttonMessage = {
 image: { url: anu.thumbnail },
 caption: `
 ➢ Title : ${anu.title}
-➢ Ext : Search
-➢ ID : ${anu.videoId}
 ➢ Duration : ${anu.timestamp}
 ➢ Viewers : ${anu.views}
 ➢ Uploaded : ${anu.ago}
@@ -7568,7 +7310,7 @@ headerType: 4,
 contextInfo:{externalAdReply:{
 title: anu.title,
 body: ` `,
-thumbnail: log0,
+thumbnail: 1,
 mediaType:2,
 mediaUrl: anu.url,
 sourceUrl: anu.url
@@ -8267,7 +8009,7 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
 case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-teks = `DONATE\n〽️𝘗𝘜𝘓𝘚𝘈:0838-4540-9710\n〽️𝘚𝘈𝘞𝘌𝘙𝘐𝘈:https://saweria.co/Kianganz\n〽️𝘔𝘠 𝘎𝘐𝘛𝘏𝘜𝘉:https://github.com/Kianganz1\n\n 𝗝𝗔𝗦𝗔 𝗦𝗘𝗪𝗔 𝗕𝗢𝗧 𝗠𝗨𝗥𝗔𝗛\n• 5k/10 hari\n• 10k/30hari\n`
+teks = `DONATE\n〽️𝘗𝘜𝘓𝘚𝘈:0838-4540-9710\n〽️𝘚𝘈𝘞𝘌𝘙𝘐𝘈:https://saweria.co/Kianganz\n〽️𝘔𝘠 𝘎𝘐𝘛𝘏𝘜𝘉:https://github.com/Kianganz1`
 let buttons = [
 {buttonId: `doge`, buttonText: {displayText: '🗿'}, type: 1}
 ]
@@ -8275,7 +8017,6 @@ let buttonMessage = {
 image: thum,
 jpegThumbnail: log0,
 caption: teks,
-footer: `${botname}`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
@@ -8343,8 +8084,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 listMessage :{
                     title: `Hallo ${pushname} 👋`,
                     description: `Please Choose The Menu`,
-                    buttonText: "CLICK HERE 📌",
-                    footerText: `©Kian | ModzBotz`,
+                    buttonText: "CLICK HERE",
                     listType: "SINGLE_SELECT",
                     sections: [{
 								"title": "😇 Whatsapp bots created by Kian 🤗",
@@ -8654,16 +8394,9 @@ await XeonBotInc.send5ButImg(from, `
 • ${prefix}classic
 
  𝗗𝗢𝗡𝗪𝗟𝗢𝗔𝗗 	
-• ${prefix}instagram [url]
 • ${prefix}igtv [url]
-• ${prefix}igstory [username]
-• ${prefix}facebook [url]
-• ${prefix}fbmp3 [url]
 • ${prefix}twitter [url]
 • ${prefix}twittermp3 [url]
-• ${prefix}tiktok [url]
-• ${prefix}tiktokaudio[url]
-• ${prefix}tiktoknowm [url]
 • ${prefix}mediafire [url]
 • ${prefix}ytmp3 [url|quality]
 • ${prefix}ytmp4 [url|quality]
@@ -8682,7 +8415,6 @@ await XeonBotInc.send5ButImg(from, `
 • ${prefix}playstore [query]
 • ${prefix}gimage [query]
 • ${prefix}pinterest [query]
-• ${prefix}image [query]
 • ${prefix}film [query]
 • ${prefix}wallpaper [query]
 • ${prefix}searchgc [query]
@@ -9424,17 +9156,11 @@ case 'downloadmenu':
 var unicorn = await getBuffer(picak+'Download Menu')
 await XeonBotInc.send5ButImg(from, `
  𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗
-• ${prefix}instagram [url]
 • ${prefix}igtv [url]
 • ${prefix}igstory [username]
-• ${prefix}facebook [url]
 • ${prefix}fbmp3 [url]
 • ${prefix}twitter [url]
 • ${prefix}twittermp3 [url]
-• ${prefix}tiktok [url]
-• ${prefix}tiktokaudio [url]
-• ${prefix}tiktoknowm [url]
-• ${prefix}instagram [url]
 • ${prefix}igstory [url]
 • ${prefix}mediafire [url]
 • ${prefix}ytmp3 [url|quality]
@@ -9459,7 +9185,6 @@ await XeonBotInc.send5ButImg(from, `
 • ${prefix}google [query]
 • ${prefix}gimage [query]
 • ${prefix}pinterest [query]
-• ${prefix}image [query]
 • ${prefix}film [query]
 • ${prefix}playstore [query]
 • ${prefix}wallpaper [query]
@@ -10112,6 +9837,19 @@ case 'tqtt':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(`♥𝗧𝗛𝗔𝗡𝗞𝗦 𝗧𝗢🌷\nLORD BUDDHA\nXeon\nKian\nModzBotOfc\nMy family\n This script has been recode and in remake by Kian!!!`)
+break
+case 'woi': 
+case 'bot':
+case 'p':
+	   if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+reply(`Yes, what is up?`)
+break
+case 'linkgcc': 
+c
+	   if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+reply(`https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg`)    
 break
             default:
                 if (budy.startsWith('=>')) {
