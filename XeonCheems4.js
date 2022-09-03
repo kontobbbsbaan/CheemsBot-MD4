@@ -7273,22 +7273,25 @@ let buttons = [
 ]
 let buttonMessage = {
 image: { url: anu.thumbnail },
-caption: `
-➢ Title : ${anu.title}
-➢ Duration : ${anu.timestamp}
-➢ Viewers : ${anu.views}
-➢ Uploaded : ${anu.ago}
-➢ Author : ${anu.author.name}
-➢ Channel : ${anu.author.url}
-➢ Description : ${anu.description}
-➢ Url : ${anu.url}`,
-footer: ` choose the type of vidio or audio`,
+caption: `*| YOUTUBE PLAY |*
+
+➣ Title : ${anu.title}
+➣ Ext : Search
+➣ ID : ${anu.videoId}
+➣ Duration : ${anu.timestamp}
+➣ Viewers : ${anu.views}
+➣ Uploaded : ${anu.ago}
+➣ Author : ${anu.author.name}
+➣ Channel : ${anu.author.url}
+➣ Description : ${anu.description}
+➣ Url : ${anu.url}`,
+footer: `${global.botname}`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: anu.title,
-body: ` `,
-thumbnail: 1,
+body: `${global.botname}`,
+thumbnail: log0,
 mediaType:2,
 mediaUrl: anu.url,
 sourceUrl: anu.url
