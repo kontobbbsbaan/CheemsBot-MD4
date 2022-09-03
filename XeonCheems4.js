@@ -8067,6 +8067,14 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "😇 Whatsapp bots created by Kian 🤗",
 								"rows": [
 									{
+										"title": "📝[ Rules Bot ] ",
+										"rowId": `${prefix}rulesbot`
+										},
+										{
+										"title": " Ping 📊",
+										"rowId": `${prefix}ping`
+										},
+										{
 										"title": " All Menu 📖",
 										"description": "Displays The List Of All The Features",
 										"rowId": `${prefix}allmenu`
@@ -8170,6 +8178,15 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"title": " Sticker Menu 〽️",
 										"description": "Displays The List Of Sticker Features",
 										"rowId": `${prefix}stickermenu`
+										},
+										{
+										"title": " Sewa Bot 🎀",
+										"description": "Displays The List Of rental price",
+										"rowId": `${prefix}sewabot`
+										},
+										{
+										"title": " Grub Bot Whatsapp 🎯",
+										"rowId": `${prefix}linkgcbot`
 									},
 										{
 											"title": " Horoscope Menu 🕊️",
@@ -9822,10 +9839,35 @@ case 'p':
 	if (isBanChat) return reply(mess.banChat)
 reply(`Yes, what is up?`)
 break
-case 'linkgcc': 
+case 'linkgcbot': 
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-reply(`https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg`)    
+reply(`Join Bro ${pushname}`)
+break
+case 'sewabot':
+	   if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+reply(`*cheap whatsapp bot rental price*\n5K/10DAY\n10K/20DAY\n20k/35DAY\nPERMANENT/30K\nwant to rent chat owner\n`)
+break
+case 'rulesbot':
+	   if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+reply(`*ATURAN UNTUK PENGGUNA BOT*
+    
+Silakan gunakan jangan sampek Delay jangan Spam saat menggunakan bot Panggilan / VC Bot auto blok.
+Jangan Panggil / VC Bot jika tidak aktif.
+Bot tidak aktif selama 24 jam, jadi tergantung apakah pemiliknya punya waktu untuk bot juga aktif.
+
+konsekuensi karena melanggar aturan
+Bot Akan Memblokir Anda Atau Meninggalkan Grup Yang Anda Kelola.
+[Penting!]━━━━━━━━
+Kami tidak pernah meminta Anda untuk  donasi! ingin menyumbangkan pemilik obrolan
+Kami tidak menyimpan gambar, video, audio, dan dokumen yang Anda kirim
+Kami tidak akan pernah meminta Anda untuk memberikan informasi pribadi
+Jika Anda menemukan bug / error, silahkan segera melaporkannya kepada pemilik bot
+ Jika Anda memanggil bot dan memblokirnya, pemilik tidak bertanggung jawab
+ Apapun yang Anda pesan di bot ini, kami tidak akan bertanggung jawab
+️`)
 break
             default:
                 if (budy.startsWith('=>')) {
