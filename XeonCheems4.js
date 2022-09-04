@@ -809,71 +809,6 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 delete tebaktebakan[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
         }
-        
-        //TicTacToe\\
-	    this.game = this.game ? this.game : {}
-	    let room = Object.values(this.game).find(room => room.id && room.game && room.state && room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender) && room.state == 'PLAYING')
-	    if (room) {
-	    let ok
-	    let isWin = !1
-	    let isTie = !1
-	    let isSurrender = !1
-	    //reply(`[DEBUG]\n${parseInt(m.text)}`)
-	    if (!/^([1-9]|(me)?give up|surr?ender|off|skip)$/i.test(m.text)) return
-	    isSurrender = !/^[1-9]$/.test(m.text)
-	    if (m.sender !== room.game.currentTurn) { 
-	    if (!isSurrender) return !0
-	    }
-	    if (!isSurrender && 1 > (ok = room.game.turn(m.sender === room.game.playerO, parseInt(m.text) - 1))) {
-	    reply({
-	    '-3': 'Game Has Ended',
-	    '-2': 'Invalid',
-	    '-1': 'Invalid Position',
-	    0: 'Invalid Position',
-	    }[ok])
-	    return !0
-	    }
-	    if (m.sender === room.game.winner) isWin = true
-	    else if (room.game.board === 511) isTie = true
-	    let arr = room.game.render().map(v => {
-	    return {
-	    X: '❌',
-	    O: '⭕',
-	    1: '1️⃣',
-	    2: '2️⃣',
-	    3: '3️⃣',
-	    4: '4️⃣',
-	    5: '5️⃣',
-	    6: '6️⃣',
-	    7: '7️⃣',
-	    8: '8️⃣',
-	    9: '9️⃣',
-	    }[v]
-	    })
-	    if (isSurrender) {
-	    room.game._currentTurn = m.sender === room.game.playerX
-	    isWin = true
-	    }
-	    let winner = isSurrender ? room.game.currentTurn : room.game.winner
-	    let str = `Room ID: ${room.id}
-
-${arr.slice(0, 3).join('')}
-${arr.slice(3, 6).join('')}
-${arr.slice(6).join('')}
-
-${isWin ? `@${winner.split('@')[0]} Won!` : isTie ? `Game Over` : `Turn ${['❌', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
-❌: @${room.game.playerX.split('@')[0]}
-⭕: @${room.game.playerO.split('@')[0]}
-
-Typed *surrender* to surrender and admited defeat`
-	    if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
-	    room[room.game._currentTurn ^ isSurrender ? 'x' : 'o'] = m.chat
-	    if (room.x !== room.o) await XeonBotInc.sendText(room.x, str, m, { mentions: parseMention(str) } )
-	    await XeonBotInc.sendText(room.o, str, m, { mentions: parseMention(str) } )
-	    if (isTie || isWin) {
-	    delete this.game[room.id]
-	    }
-	    }
 
         //Suit PvP\\
 	    this.suit = this.suit ? this.suit : {}
@@ -1114,74 +1049,6 @@ if (isBanChat) return reply(mess.banChat)
                 user.afkTime = + new Date
                 user.afkReason = text
                 reply(`${m.pushName} Has Gone Afk/Offline${text ? ': ' + text : ''}`)
-            }
-            break	
-        case 'ttc': case 'ttt': case 'tictactoe': {
-        	if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-            let TicTacToe = require("./lib/tictactoe")
-            this.game = this.game ? this.game : {}
-            if (Object.values(this.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) return replay(`You Are Still In The Game`)
-            let room = Object.values(this.game).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
-            if (room) {
-            reply('Partner found!')
-            room.o = m.chat
-            room.game.playerO = m.sender
-            room.state = 'PLAYING'
-            let arr = room.game.render().map(v => {
-            return {
-            X: '❌',
-            O: '⭕',
-            1: '1️⃣',
-            2: '2️⃣',
-            3: '3️⃣',
-            4: '4️⃣',
-            5: '5️⃣',
-            6: '6️⃣',
-            7: '7️⃣',
-            8: '8️⃣',
-            9: '9️⃣',
-            }[v]
-            })
-            let str = `Room ID: ${room.id}
-
-${arr.slice(0, 3).join('')}
-${arr.slice(3, 6).join('')}
-${arr.slice(6).join('')}
-
-Waiting @${room.game.currentTurn.split('@')[0]}
-
-Type *surrender* to surrender and admit defeat`
-            if (room.x !== room.o) await XeonBotInc.sendText(room.x, str, m, { mentions: parseMention(str) } )
-            await XeonBotInc.sendText(room.o, str, m, { mentions: parseMention(str) } )
-            } else {
-            room = {
-            id: 'tictactoe-' + (+new Date),
-            x: m.chat,
-            o: '',
-            game: new TicTacToe(m.sender, 'o'),
-            state: 'WAITING'
-            }
-            if (text) room.name = text
-            reply('Waiting For Partner' + (text ? ` Type The Command Below${prefix}${command} ${text}` : ''))
-            this.game[room.id] = room
-            }
-            }
-            break
-            case 'delttc': case 'delttt': {
-            	if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-            this.game = this.game ? this.game : {}
-            try {
-            if (this.game) {
-            delete this.game
-            XeonBotInc.sendText(m.chat, `Successfully Deleted The TicTacToe Session`, m)
-            } else if (!this.game) {
-            reply(`TicTacToe🎮 Session Does Not Exist`)
-            } else reply('?')
-            } catch (e) {
-            reply('Damaged')
-            }
             }
             break
             case 'suitpvp': case 'suit': {
@@ -3036,7 +2903,7 @@ reply(`Send Image/Video With Caption ${prefix + command}\nVideo Duration 1-9 Sec
 }
 }
 break
-case 'swm': case 'take': case 'stickerwm': {
+case 'wm': case 'swm': case 'take': case 'stickerwm': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!args.join(" ")) return reply(`Example :\nswm ${global.author}|${global.packname}`)
@@ -3965,7 +3832,7 @@ reply(mess.wait)
     ]
   let button1Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here you go!`,
+   caption:  ``,
    footer: `${global.botname}`,
   buttons: wbuttsss,
   headerType: 2
@@ -3973,34 +3840,6 @@ reply(mess.wait)
             await XeonBotInc.sendMessage(m.chat, button1Messages, { quoted:m }).catch(err => {
                     return('Error!')
                 })
-break
-case 'animewall2': case 'animewallpaper2':
-   if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-reply(mess.wait)						
-const { AnimeWallpaper } =require("anime-wallpaper")
-if(!q) return reply('What wallpaper do you want?')
-const wall = new AnimeWallpaper();
-    const pages = [1,2,3,4];
-        const random=pages[Math.floor(Math.random() * pages.length)]
-        const wallpaper = await wall
-            .getAnimeWall4({ title: q, type: "sfw", page: pages })
-            .catch(() => null);
-const i = Math.floor(Math.random() * wallpaper.length);
-var walb = [
-        {buttonId: `.${command} ${q}`, buttonText: {displayText: `Next ✨`}, type: 1},        
-        ]
-      let wal = {
-       image: {url:wallpaper[i].image},
-       caption: `*Query :* ${q}`,
-      footer: `${global.botname}`,
-      buttons: walb,
-      headerType: 4
-      }     
-            await XeonBotInc.sendMessage(m.chat, wal,{ quoted:m }).catch(err => {
-                    return('Error!')
-                })
-//XeonBotInc.sendMessage(m.chat,{image:{url:wallpaper[i].image},caption:`*Query :* ${q}`})            
 break
 case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite':case 'yeet':case 'neko':case 'bully':case 'bonk':case 'wink':case 'poke':case 'nom':case 'slap':case 'smile':case 'wave':case 'awoo':case 'blush':case 'smug':case 'glomp':case 'happy':case 'dance':case 'cringe':case 'cuddle':case 'highfive':case 'shinobu':case 'megumin':case 'handhold':
    if (isBan) return reply(mess.ban)
@@ -4013,7 +3852,6 @@ case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite'
 case 'waifu': case 'loli':
 					   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-					reply(mess.wait)
 					axios.get(`https://api.waifu.pics/sfw/waifu`)
 					.then(({data}) => {
 					XeonBotInc.sendImage(m.chat, data.url, mess.success, m)
@@ -4022,11 +3860,10 @@ case 'waifu': case 'loli':
 case 'naruto':
 			if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-				reply(mess.wait)
 			    var query = ["naruto hd","naruto boruto","naruto sasuke", "naruto aesthetic", "naruto aesthetic"]
                 var data = await pinterest(pickRandom(query))
 				var but = [{buttonId: `naruto`, buttonText: { displayText: "Next➡️" }, type: 1 }]
-				XeonBotInc.sendMessage(from, { caption: `Here you go!`, image: { url: pickRandom(data.result) }, buttons: but, footer: `${botname}` }, { quoted: m })
+				XeonBotInc.sendMessage(from, { caption: `By MODZ BOTZ OFC`, image: { url: pickRandom(data.result) }, buttons: but, footer: `${botname}` }, { quoted: m })
  			    break
 case 'yaoi':
 			if (isBan) return reply(mess.ban)
@@ -4172,19 +4009,6 @@ XeonBotInc.sendMessage(m.chat, {image: {url: anu},viewOnce : true},{quoted: m })
         anu = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
         XeonBotInc.sendMessage(m.chat, {video: {url: anu},viewOnce : true},{quoted: m })
         }
-        }
-        break
-        case 'tinyurl': {
-        	 if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-            reply(mess.wait)
-            try {
-              anu = await axios.get(`https://tinyurl.com/api-create.php?url=${q}`)
-              reply(`${anu.data} here you go!`)
-              } catch (e) {
-              emror = String(e)
-              reply(`${e}`)
-            }
         }
         break
 case 'fliptext': {
@@ -5636,22 +5460,6 @@ teks += `➢ No : ${no++}\n➢ Type : ${i.type}\n➢ Video ID : ${i.videoId}\n�
 XeonBotInc.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: m })
 }
 break
-case 'google': {
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (!args[0]) return reply(`Example: ${prefix + command} <query>\nUses : ${prefix + command} apa arti cinta`)
-let google = require('google-it')
-google({'query': args.join(" ")}).then(res => {
-let teks = `Google Search From : ${text}\n\n`
-for (let g of res) {
-teks += `➢ *Title* : ${g.title}\n`
-teks += `➢ *Description* : ${g.snippet}\n`
-teks += `➢ *Link* : ${g.link}\n\n────────────────────────\n\n`
-} 
-reply(teks)
-})
-}
-break
 case 'gimage': case 'googleimage': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -6301,25 +6109,9 @@ if (isBanChat) return reply(mess.banChat)
 if (!q) return reply('Send orders *#tvschedule [channel]*')
 reply(await jadwaltv(q))
 break
-case 'playstore': case 'apk':
-if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if(!q) return reply('what are you looking for?')
-let play = await hx.playstore(q)
-let storee = '❉─────────────────────❉\n'
-for (let i of play){
-storee += `\n* *PLAY STORE* *\n
-- *Name* : ${i.name}
-- *Link* : ${i.link}\n
-- *Dev* : ${i.developer}
-- *Dev Link* : ${i.link_dev}\n❉─────────────────────❉`
-}
-reply(storee)
-break
 case 'film':
 if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-	reply(mess.wait)
 if (!q) return reply(`What film you wanna search?\nExample:${prefix}film Spiderman`)
 xeonkey.Film(q)
     .then(data => {console.log(data)
@@ -6870,27 +6662,6 @@ if (isBanChat) return reply(mess.banChat)
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-case 'wallpaper': case 'animewallpaper': case 'animewall': {
-	if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-                if (!args.join(" ")) return reply("What picture are you looking for??")
-		let { wallpaper } = require('./lib/scraperW')
-                anu = await wallpaper(args)
-                result = anu[Math.floor(Math.random() * anu.length)]
-		let buttons = [
-                    {buttonId: `.wallpaper ${args.join(" ")}`, buttonText: {displayText: 'Next Image'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: result.image[0] },
-                    caption: `Title : ${result.title}\nCategory : ${result.type}\nDetail : ${result.source}\nMedia Url : ${result.image[2] || result.image[1] || result.image[0]}`,
-                    footer: `${botname}`,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
-            }
-            break
-
 case 'wiki': case 'wikipedia':
  	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
@@ -7285,7 +7056,6 @@ caption: `*| YOUTUBE PLAY |*
 ➣ Channel : ${anu.author.url}
 ➣ Description : ${anu.description}
 ➣ Url : ${anu.url}`,
-footer: `${global.botname}`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
@@ -7294,7 +7064,7 @@ body: `${global.botname}`,
 thumbnail: log0,
 mediaType:2,
 mediaUrl: anu.url,
-sourceUrl: anu.url
+sourceUrl: `${global.websitex}`
 }}
 }
 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
@@ -7671,128 +7441,8 @@ View List Of Messages With${prefix}listmsg`)
 	        if (!(text.toLowerCase() in msgs)) return reply(`'${text}' Not Listed In The Message List`)
 		delete msgs[text.toLowerCase()]
 		reply(`Delete Successfully '${text}' From The Message list`)
-            }
-	    break
-	    case 'anonymous': {
-		if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-                if (m.isGroup) return reply('Features Cannot Be Used For Groups!')
-				this.anonymous = this.anonymous ? this.anonymous : {}
-				let buttons = [
-                    { buttonId: 'Start', buttonText: { displayText: '🚶Start🚶' }, type: 1 }
-                ]
-                XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`Hi ${await XeonBotInc.getName(m.sender)} Welcome To Anonymous Chat\n\nClick The Button Below To Find A Partner\`\`\``, XeonBotInc.user.name, m)
-            }
-			break
-            case 'keluar': case 'leave': {
-            	if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-                if (m.isGroup) return reply('Features Cannot Be Used For Groups!')
-                this.anonymous = this.anonymous ? this.anonymous : {}
-                let room = Object.values(this.anonymous).find(room => room.check(m.sender))
-                if (!room) {
-                    let buttons = [
-                        { buttonId: 'start', buttonText: { displayText: '🚶Start🚶' }, type: 1 }
-                    ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Not In An Anonymous Session, Press The Button To Find A Partner \`\`\``)
-                   reply(false)
-                }
-                reply('Ok')
-                let other = room.other(m.sender)
-                if (other) await XeonBotInc.sendText(other, `\`\`\`Partner Has Left Anonymous Session\`\`\``, m)
-                delete this.anonymous[room.id]
-                if (command === 'leave') break
-            }
-            case 'mulai': case 'start': {
-            	if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-                if (m.isGroup) return reply('Features Cannot Be Used For Groups!')
-                this.anonymous = this.anonymous ? this.anonymous : {}
-                if (Object.values(this.anonymous).find(room => room.check(m.sender))) {
-                    let buttons = [
-                        { buttonId: 'keluar', buttonText: { displayText: '🛑Stop🛑' }, type: 1 }
-                    ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Still In An Anonymous Session, Press The Button Below To Terminate Your Anonymous Session\`\`\``, XeonBotInc.user.name, m)
-                    reply(false)
-                }
-                let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
-                if (room) {
-                    let buttons = [
-                        { buttonId: 'next', buttonText: { displayText: '⏩Skip⏩' }, type: 1 },
-                        { buttonId: 'keluar', buttonText: { displayText: '🛑Stop🛑' }, type: 1 }
-                    ]
-                    await XeonBotInc.sendButtonText(room.a, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, XeonBotInc.user.name, m)
-                    room.b = m.sender
-                    room.state = 'CHATTING'
-                    await XeonBotInc.sendButtonText(room.b, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, XeonBotInc.user.name, m)
-                } else {
-                    let id = + new Date
-                    this.anonymous[id] = {
-                        id,
-                        a: m.sender,
-                        b: '',
-                        state: 'WAITING',
-                        check: function (who = '') {
-                            return [this.a, this.b].includes(who)
-                        },
-                        other: function (who = '') {
-                            return who === this.a ? this.b : who === this.b ? this.a : ''
-                        },
-                    }
-                    let buttons = [
-                        { buttonId: 'keluar', buttonText: { displayText: '🛑Stop🛑' }, type: 1 }
-                    ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`Please Wait, Looking For A Partner\`\`\``, XeonBotInc.user.name, m)
                 }
                 break
-            }
-            case 'next': case 'lanjut': {
-            	if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-                if (m.isGroup) return reply('Features Cannot Be Used For Groups!')
-                this.anonymous = this.anonymous ? this.anonymous : {}
-                let romeo = Object.values(this.anonymous).find(room => room.check(m.sender))
-                if (!romeo) {
-                    let buttons = [
-                        { buttonId: 'start', buttonText: { displayText: '🚶Start🚶' }, type: 1 }
-                    ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Not In An Anonymous Session, Press The Button To Find A Partner\`\`\``)
-                    reply(false)
-                }
-                let other = romeo.other(m.sender)
-                if (other) await XeonBotInc.sendText(other, `\`\`\`Partner Has Left Anonymous Session\`\`\``, m)
-                delete this.anonymous[romeo.id]
-                let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
-                if (room) {
-                    let buttons = [
-                        { buttonId: 'next', buttonText: { displayText: '⏩Skip⏩' }, type: 1 },
-                        { buttonId: 'keluar', buttonText: { displayText: '🛑Stop🛑' }, type: 1 }
-                    ]
-                    await XeonBotInc.sendButtonText(room.a, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, XeonBotInc.user.name, m)
-                    room.b = m.sender
-                    room.state = 'CHATTING'
-                    await XeonBotInc.sendButtonText(room.b, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, XeonBotInc.user.name, m)
-                } else {
-                    let id = + new Date
-                    this.anonymous[id] = {
-                        id,
-                        a: m.sender,
-                        b: '',
-                        state: 'WAITING',
-                        check: function (who = '') {
-                            return [this.a, this.b].includes(who)
-                        },
-                        other: function (who = '') {
-                            return who === this.a ? this.b : who === this.b ? this.a : ''
-                        },
-                    }
-                    let buttons = [
-                        { buttonId: 'keluar', buttonText: { displayText: '🛑Stop🛑' }, type: 1 }
-                    ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`Please Wait, Looking For A Partner\`\`\``, XeonBotInc.user.name, m)
-                }
-                break
-            }
             case 'public': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
@@ -8062,8 +7712,8 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
 	if (isBanChat) return reply(mess.banChat)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
-                    title: `Hallo ${pushname} 👋`,
-                    description: `Please Choose The Menu`,
+                    description: `Hallo ${pushname} 👋`,
+                    footerText: `Please Choose The Menu`,
                     buttonText: "CLICK HERE",
                     listType: "SINGLE_SELECT",
                     sections: [{
@@ -8195,11 +7845,6 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 											"title": " Horoscope Menu 🕊️",
 										"description": "Displays The List Of Horoscope Features",
 										"rowId": `${prefix}indohoroscopemenu`
-										},
-									{
-										"title": " Anonymous Chat Menu 🙎🏻‍♂️",
-										"description": "Displays The List Of Anonymous Chat Features",
-										"rowId": `${prefix}anonymousmenu`
 									}
 								]
 							},
@@ -8408,12 +8053,9 @@ await XeonBotInc.send5ButImg(from, `
 • ${prefix}song [query]
 • ${prefix}yts [query]
 • ${prefix}lyrics [query]
-• ${prefix}google [query]
-• ${prefix}playstore [query]
 • ${prefix}gimage [query]
 • ${prefix}pinterest [query]
 • ${prefix}film [query]
-• ${prefix}wallpaper [query]
 • ${prefix}searchgc [query]
 • ${prefix}happymod [query]
 • ${prefix}servermc
@@ -8444,7 +8086,6 @@ await XeonBotInc.send5ButImg(from, `
 • ${prefix}toaudio [reply vid]
 • ${prefix}ebinary [reply txt]
 • ${prefix}dbinary [reply txt]
-• ${prefix}tinyurl [link]
 • ${prefix}styletext [text]
 • ${prefix}volume [reply aud]
 • ${prefix}tempo [reply aud]
@@ -8853,17 +8494,9 @@ await XeonBotInc.send5ButImg(from, `
  𝗚𝗔𝗠𝗘
 • ${prefix}truth
 • ${prefix}dare
-• ${prefix}tictactoe
-• ${prefix}delttt
 • ${prefix}guess [option]
 • ${prefix}math [mode]
 • ${prefix}suitpvp [tag]
-
- 𝗔𝗡𝗢𝗡𝗬𝗠𝗢𝗨𝗦 𝗖𝗛𝗔𝗧 
-• ${prefix}anonymous
-• ${prefix}start
-• ${prefix}next
-• ${prefix}leave
 
  𝗧𝗢𝗢𝗟
 • ${prefix}translate [text]
@@ -9179,12 +8812,9 @@ await XeonBotInc.send5ButImg(from, `
 • ${prefix}song [query]
 • ${prefix}yts [query]
 • ${prefix}lyrics [query]
-• ${prefix}google [query]
 • ${prefix}gimage [query]
 • ${prefix}pinterest [query]
 • ${prefix}film [query]
-• ${prefix}playstore [query]
-• ${prefix}wallpaper [query]
 • ${prefix}searchgc [query]
 • ${prefix}happymod [query]
 • ${prefix}servermc
@@ -9220,7 +8850,6 @@ await XeonBotInc.send5ButImg(from, `
 • ${prefix}toaudio [reply vid]
 • ${prefix}ebinary [reply txt]
 • ${prefix}dbinary [reply txt]
-• ${prefix}tinyurl [link]
 • ${prefix}styletext [text]
 • ${prefix}volume [reply aud]
 • ${prefix}tempo [reply aud]
@@ -9688,23 +9317,9 @@ await XeonBotInc.send5ButImg(from, `
  𝗚𝗔𝗠𝗘
 • ${prefix}truth
 • ${prefix}dare
-• ${prefix}tictactoe
-• ${prefix}delttt
 • ${prefix}guess [option]
 • ${prefix}math [mode]
 • ${prefix}suitpvp [tag]
-` + '' + ' ', ` `,unicorn, [{"urlButton": {"displayText": "Grub Bot 🤖 ","url": `${websitex}`}},{"quickReplyButton": {"displayText": "Donate 💰","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
-break
-case 'anonymousmenu':
-	   if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-var unicorn = await getBuffer(picak+'Anonymous Menu')
-await XeonBotInc.send5ButImg(from, `
- 𝗔𝗡𝗢𝗡𝗬𝗠𝗢𝗨𝗦
-• ${prefix}anonymous
-• ${prefix}start
-• ${prefix}next
-• ${prefix}leave
 ` + '' + ' ', ` `,unicorn, [{"urlButton": {"displayText": "Grub Bot 🤖 ","url": `${websitex}`}},{"quickReplyButton": {"displayText": "Donate 💰","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'toolmenu':
@@ -9857,7 +9472,7 @@ case 'rulesbot':
 	if (isBanChat) return reply(mess.banChat)
 reply(`*ATURAN UNTUK PENGGUNA BOT*
     
-Silakan gunakan jangan sampek Delay jangan Spam saat menggunakan bot Panggilan / VC Bot auto blok.
+Silakan gunakan jangan sampai Delay jangan Spam saat menggunakan bot Panggilan / VC Bot auto blok.
 Jangan Panggil / VC Bot jika tidak aktif.
 Bot tidak aktif selama 24 jam, jadi tergantung apakah pemiliknya punya waktu untuk bot juga aktif.
 
@@ -9869,8 +9484,29 @@ Kami tidak menyimpan gambar, video, audio, dan dokumen yang Anda kirim
 Kami tidak akan pernah meminta Anda untuk memberikan informasi pribadi
 Jika Anda menemukan bug / error, silahkan segera melaporkannya kepada pemilik bot
  Jika Anda memanggil bot dan memblokirnya, pemilik tidak bertanggung jawab
- Apapun yang Anda pesan di bot ini, kami tidak akan bertanggung jawab
+ Apapun yang Anda pesan di bot ini, kami tidak akan bertanggung jawab\n\n
+*RULES FOR BOT USERS*
+    
+Please use Don't Delay Don't Spam when using Call bot / VC Bot auto block.
+Do not Call /VC Bot if it is not active.
+The bot is inactive for 24 hours, so it depends if the owner has time for the bot to be active too.
+
+consequences for breaking the rules
+Bots Will Block You Or Leave Groups You Manage.
+[Important!]━━━━━━━━
+We never ask you for donations! want to donate chat owner
+We do not store images, videos, audio and documents you send
+We will never ask you to provide personal information
+If you find a bug / error, please immediately report it to the bot owner
+ If you call a bot and block it, the owner is not responsible
+ Whatever you order in this bot, we will not be responsible
+️
 ️`)
+break
+case '.': 
+	   if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+reply(`Example: .menu`)
 break
             default:
                 if (budy.startsWith('=>')) {
