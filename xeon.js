@@ -192,6 +192,13 @@ caption: xeonbody,
 footer: ``,
 buttons: buttons,
 headerType: 4,
+contextInfo:{externalAdReply:{
+title: `${metadata.subject}`,
+body: ` `,
+mediaType: 1,
+thumbnail: log0,
+sourceUrl: `https://www.facebook.com/profile.php?id=100077747022268`,
+mediaUrl: `https://youtu.be/Lf7I7zvtsDE`
 }}
 }
 XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
@@ -221,6 +228,13 @@ caption: xeonbody,
 footer: ``,
 buttons: buttons,
 headerType: 4,
+contextInfo:{externalAdReply:{
+title: `${metadata.subject}`,
+body: ` `,
+mediaType: 1,
+thumbnail: log0,
+sourceUrl: `https://www.facebook.com/profile.php?id=100077747022268`,
+mediaUrl: `https://youtu.be/Lf7I7zvtsDE`
 }}
 }
 XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
