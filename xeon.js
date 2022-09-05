@@ -196,7 +196,7 @@ contextInfo:{externalAdReply:{
 title: `${metadata.subject}`,
 body: ` `,
 mediaType: 1,
-thumbnail: XeonWlcm,
+thumbnail: log0,
 sourceUrl: `https://www.facebook.com/profile.php?id=100077747022268`,
 mediaUrl: `https://youtu.be/Lf7I7zvtsDE`
 }}
@@ -232,7 +232,7 @@ contextInfo:{externalAdReply:{
 title: `${metadata.subject}`,
 body: ` `,
 mediaType: 1,
-thumbnail: XeonLft,
+thumbnail: log0,
 sourceUrl: `https://www.facebook.com/profile.php?id=100077747022268`,
 mediaUrl: `https://youtu.be/Lf7I7zvtsDE`
 }}
