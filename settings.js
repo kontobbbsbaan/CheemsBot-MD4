@@ -37,7 +37,7 @@ global.APIKeys = {
 
 //aumto functioner
 global.autoTyping = false //auto tying in gc (true to on, false to off)
-global.autoreadpmngc = false //auto reading in gc and pm (true to on, false to off)
+global.autoreadpmngc = true //auto reading in gc and pm (true to on, false to off)
 global.autoReadGc = false //auto reading in gc (true to on, false to off)
 global.autoRecord = false //auto recording (true to on, false to off)
 global.available = true //auto available (true to on, false to off)
@@ -63,7 +63,7 @@ global.location = "Indonesian" //ur location
 //bot bomdy 
 global.owner = ['6283845409710']
 global.ownertag = '6283845409710' //ur tag number
-global.botname = 'MODZ BOTZ OFC' //ur bot name
+global.botname = 'MODZ BOTZ' //ur bot name
 global.linkz = "https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg" //your theme url which will be displayed on whatsapp
 global.websitex = "https://chat.whatsapp.com/FvDujLzzrQsGaJaRLVZ0Fg" //ur website to be displayed
 global.botscript = 'https://github.com/DGXeon/CheemsBot-MD4' //script link
